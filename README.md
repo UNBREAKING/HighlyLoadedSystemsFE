@@ -53,7 +53,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { COLORS } from '../../../constants'
 
-//пишем view, children - это React.node(s), это могут быть и компоненты, и текст,и число, проще //говоря, содержимое, но не properties.
+//пишем view, children - это React.node(s), это могут быть и компоненты, и текст,и число, проще говоря, содержимое, но не properties.
 const Button = ({ children, className, onClick }) =>
   <Wrapper className={className} onClick={onClick}>
     {children}
@@ -101,6 +101,7 @@ export default compose(
 )(Component)
 ``` 
 если нам нужен `connect` для работы с хранилищем, то обязательно в `compose` ставим его на верхний уровень.(Пример выше)
+
 Если записать пример выше без `compose`, то это будет выглядеть так:
 ```
 export default connect()(
@@ -286,7 +287,8 @@ export default connect(mapStateToProps, dispatchToProps)(Login)
 ```
 Затем смотрим `Login.js`:
 тут также есть пример того, как мы используем общую компоненту Button
-как все происходит, пользователь нажмет на кнопку, затем в редаксе изменится перемнная `isLoginOpen`,
+
+Как все происходит, пользователь нажмет на кнопку, затем в редаксе изменится перемнная `isLoginOpen`,
 после этого она прокинется снова в компоненту, и обновленное значение изменит внешний вид кнопки.
 ```
 import React from 'react'
