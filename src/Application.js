@@ -6,6 +6,7 @@ import { routerMiddleware } from 'react-router-redux'
 import createHistory from 'history/createBrowserHistory'
 import thunk from 'redux-thunk'
 import reducers from './reducers/reducers'
+import { App } from './components'
 
 const history = createHistory()
 const middleware = routerMiddleware(history)
@@ -18,9 +19,7 @@ const store = createStore(reducers,
 const Application = () =>
   <Provider store={store}>
     <Router history={history}>
-      <div>
-        работает
-      </div>
+      <App/>
     </Router>
   </Provider>
 export default Application
