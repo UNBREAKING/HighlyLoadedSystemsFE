@@ -4,7 +4,8 @@ import styled from 'styled-components'
 import {
   HomePage,
   Header,
-  Login
+  Login,
+  PlacePage
 } from '../'
 
 const App = () =>
@@ -18,6 +19,7 @@ const App = () =>
         <Route exact path='/about-us' component={HomePage} />
         <Route exact path='/places' component={HomePage} />
         <Route exact path='/events' component={HomePage} />
+        <Route exact path='/place' component={PlacePage} />
       </Switch>
     </Content>
   </Wrapper>
@@ -29,5 +31,5 @@ const Wrapper = styled.div`
 `
 const Content = styled.div`
   width: 100%;
-  padding-top: 109px;
+  padding-top: 72px;
 `

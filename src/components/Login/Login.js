@@ -13,11 +13,14 @@ const Login = ({ isLoginOpen, toggleLogin }) =>
 export default Login
 
 const Wrapper = styled.div`
+  display: flex;
+  justify-content: right;
   width: 100%;
   padding: 20px;
 `
 
 const LoginButton = styled(Button)`
+  cursor: pointer;
   ${props => props.isOpen && css`
     background: ${COLORS.lightblue};
   `}

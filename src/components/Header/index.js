@@ -18,6 +18,10 @@ const links = [
   {
     link: '/events',
     name: 'События'
+  },
+  {
+    link: '/place',
+    name: 'Заведение'
   }
 ]
 

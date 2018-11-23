@@ -37,6 +37,7 @@ const Wrapper = styled.div`
 const LinkButton = styled(Link) `
   color: black;
   font-size: 20px;
+  padding: 10px 20px;
   text-decoration:none;
   cursor: pointer;
 `
@@ -48,7 +49,6 @@ const Links = styled.div`
 
 const LinkWrapper = styled.div`
   display: inline-block;
-  padding: 10px 20px;
   border-right: 1px solid black;
   :hover {
     background: ${COLORS.lightblue};
