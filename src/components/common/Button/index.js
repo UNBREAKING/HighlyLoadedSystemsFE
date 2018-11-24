@@ -13,6 +13,12 @@ const Wrapper = styled.button`
   font-size: 16px;
   padding: 10px 20px;
   border-radius: 3px;
-  border: 1px solid black;
+  cursor: pointer;
+  border: 1px solid ${COLORS.black};
   background: ${COLORS.orange};
+  transition: 0.3s background ease;
+
+  &:hover {
+    background: ${COLORS.lightblue}
+  }
 `

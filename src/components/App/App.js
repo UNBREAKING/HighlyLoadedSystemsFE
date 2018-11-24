@@ -5,7 +5,8 @@ import {
   HomePage,
   Header,
   Login,
-  PlacePage
+  PlacePage,
+  Modals
 } from '../'
 
 const App = () =>
@@ -22,6 +23,7 @@ const App = () =>
         <Route exact path='/place' component={PlacePage} />
       </Switch>
     </Content>
+    <Modals />
   </Wrapper>
 
 export default App

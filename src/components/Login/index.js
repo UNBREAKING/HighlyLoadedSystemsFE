@@ -1,17 +1,9 @@
 import { connect } from 'react-redux'
-import { toggleLogin } from './actions'
+import { openLoginModal } from './actions'
 import Login from './Login'
 
 const dispatchToProps = {
-  toggleLogin
+  openLoginModal
 }
 
-const mapStateToProps = ({
-  login: {
-    isLoginOpen
-  }
-}) => ({
-  isLoginOpen
-})
-
-export default connect(mapStateToProps, dispatchToProps)(Login)
+export default connect(null, dispatchToProps)(Login)

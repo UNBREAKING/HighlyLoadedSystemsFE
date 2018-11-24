@@ -1,27 +1,19 @@
 import React from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { Button } from '../common'
-import { COLORS } from '../../constants'
 
-const Login = ({ isLoginOpen, toggleLogin }) =>
+const Login = ({ openLoginModal }) =>
   <Wrapper>
-    <LoginButton onClick={toggleLogin} isOpen={isLoginOpen}>
+    <Button onClick={ openLoginModal } >
       Вход/Регистрация
-    </LoginButton>
+    </Button>
   </Wrapper>
 
 export default Login
 
 const Wrapper = styled.div`
   display: flex;
-  justify-content: right;
+  justify-content: flex-end;
   width: 100%;
   padding: 20px;
-`
-
-const LoginButton = styled(Button)`
-  cursor: pointer;
-  ${props => props.isOpen && css`
-    background: ${COLORS.lightblue};
-  `}
 `

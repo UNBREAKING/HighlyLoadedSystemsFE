@@ -29,13 +29,13 @@ const Wrapper = styled.div`
   background: ${COLORS.orange};
   padding: 20px 0;
   width: 100%;
-  box-shadow: 0 0 10px black;
+  box-shadow: 0 0 10px ${COLORS.black};
   position: fixed;
   z-index: 1000;
 `
 
-const LinkButton = styled(Link) `
-  color: black;
+const LinkButton = styled(Link)`
+  color: ${COLORS.black};
   font-size: 20px;
   padding: 10px 20px;
   text-decoration:none;
@@ -43,17 +43,18 @@ const LinkButton = styled(Link) `
 `
 
 const Links = styled.div`
-  border: 1px solid black;
-  box-shadow: 2px 2px 2px black;
+  border: 1px solid ${COLORS.black};
+  box-shadow: 2px 2px 2px ${COLORS.black};
 `
 
 const LinkWrapper = styled.div`
   display: inline-block;
-  border-right: 1px solid black;
+  border-right: 1px solid ${COLORS.black};
+  transition: 0.3s background ease;
   :hover {
     background: ${COLORS.lightblue};
     ${LinkButton} {
-      color: black;
+      color: ${COLORS.black};
       text-decoration:none;
     }
   }
