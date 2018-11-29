@@ -1,0 +1,27 @@
+//it will have query: /events/id?hours=13minutes=45 - it will be used every time user chose hours and minutes from dd
+{
+  "typesOfTables": [ // null if it is a place where user can't make a reserve
+    {
+      "name": "столик на 2",
+      "available": false,
+      "id": "id123123"
+    },
+    {
+      "name": "столик на 4",
+      "available": true,
+      "id": "id123123"
+    },
+    {
+      "name": "столик на 4",
+      "available": true,
+      "id": "id123123"
+    }
+  ], 
+  "eventName": "Имя события",
+  "timeStart": "Время начала",
+  "dateStart": "22.03.2018",
+  "description": "тут текст описания",
+  "placeName": "Имя заведения", 
+  "userName": "имя фамилия", // null if user is anonymous
+  "userPhoneNumber": "+375(29)1233212" // null if user is anonymous
+}

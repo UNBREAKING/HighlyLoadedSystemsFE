@@ -1,0 +1,79 @@
+{
+  "name": "Имя заведения",
+  "description": "тут полное описание заведения",
+  "address": "полный адрес",
+  "phoneNumber": "+375(44)1232312",
+  "mail": "mail@place.by",
+  "reserverLink": "places/id12351/reserve",
+  "web": "place.by", //can be null,
+  "workingHours": [ //time can be null if it is for example weekend 
+    {
+      "day": "пн.",
+      "time": "8.00 - 22.00"
+    },
+    {
+      "day": "вт.",
+      "time": "8.00 - 22.00"
+    },
+    {
+      "day": "ср.",
+      "time": "8.00 - 22.00"
+    },
+    {
+      "day": "чт.",
+      "time": "8.00 - 22.00"
+    },
+    {
+      "day": "пт.",
+      "time": "8.00 - 24.00"
+    },
+    {
+      "day": "сб.",
+      "time": "8.00 - 24.00"
+    },
+    {
+      "day": "вс.",
+      "time": "8.00 - 22.00"
+    }
+  ],
+  "events": [
+    {
+      "name": "Туса-Джуса",
+      "link": "/events/id23132",
+      "isEnded": false 
+    },
+    {
+      "name": "День святого патрика",
+      "link": "/events/id312321",
+      "isEnded": false 
+    },
+    {
+      "name": "Новый год 2016",
+      "link": "/events/id232545",
+      "isEnded": true 
+    }
+  ],
+  "comments": [//I think it is out of scope, let keep it simple for this
+    {
+    "userName": "имя фамилия",
+    "comment": "супер-пупер",
+    "isCurrentUser": true,
+    "id": "id31245",
+    "relatedToId": null
+    },
+    {
+      "userName": "имя фамилия",
+      "comment": "не супер-пупер",
+      "isCurrentUser": false,
+      "id": "id31245",
+      "relatedToId": null
+    },
+    {
+      "userName": "имя фамилия",
+      "comment": "твой коммент не супер-пупер",
+      "isCurrentUser": false,
+      "id": "id345",
+      "relatedToId": "id31245"
+    }
+  ]
+}

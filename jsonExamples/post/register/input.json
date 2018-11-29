@@ -1,0 +1,12 @@
+//register user
+// input data
+{
+  "login": "user123",
+  "name": "User",
+  "surname": "Userovich",
+  "phonenumber": "+375(29)1113223",
+  "mail": "user123@gmail.com",
+  "sex": "man",
+  "password": "qwerty1234",
+  "type": "user" // can be bussiness or user
+} 

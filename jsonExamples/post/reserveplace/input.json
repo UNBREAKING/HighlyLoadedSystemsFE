@@ -1,0 +1,11 @@
+{
+  "type": "event", // or "place"
+  "id": "id12312312",
+  "idOfTable": "id35661",
+  "userName": "имя фамилия",
+  "userPhoneNumber": "+375(29)1325123",
+  "comment": "пользователь хотел что-то сказать",
+  "date": "22.03.2018",
+  "hour": "12",
+  "minutes": "45"
+}

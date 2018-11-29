@@ -1,0 +1,15 @@
+// we will have simple filter for query: 'hasActiveEvents' - BE will check has places active events or not
+//we have no time for implementation of all filters in mock-up
+{
+  "places": [
+    {
+      "name": "Гвоздь",
+      "address": "улица НезнаюКакая, 21 г.Минск",
+      "shortDescription": "многотекста", // if text length more than 300 symbols add '...' to the end
+      "link": "/places/id123123",
+      "time": "до 23.00" //time of today's working hours
+    }
+  ],
+  "numberOfAllPlaces": 375,
+  "nextIndexForRequest": 30 // this property answers for first index in request of events fetching
+}

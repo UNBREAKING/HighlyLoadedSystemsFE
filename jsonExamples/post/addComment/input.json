@@ -1,0 +1,5 @@
+{
+  "comment": "текст",
+  "relatedToId": "id12312", // null if it is comment to a plece,
+  "placeId": "id3213123"
+}

@@ -1,0 +1,6 @@
+//register user
+// input data
+{
+  "loginOrMail": "user123",
+  "password": "qwerty1234"
+} 

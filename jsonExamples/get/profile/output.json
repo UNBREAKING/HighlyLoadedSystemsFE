@@ -1,0 +1,39 @@
+// this is page of current user
+{
+  "name": "Name",
+  "surname": "Surname",
+  "mail": "lol@gmail.com",
+  "sex": "female",
+  "phonenumber":"+375(29)1113223",
+  "linkToAddPlace": "/profile/add-place",
+  "linkToAddEvent": "/profile/add-event",
+  "type": "user", // also can be as bussiness
+  "events": [
+    {
+      "name": "Туса-Джуса",
+      "link": "/events/id23132",
+      "isEnded": false,
+      "updateLink": "/events/id23132/update"
+    },
+    {
+      "name": "День святого патрика",
+      "link": "/events/id312321",
+      "isEnded": false,
+      "updateLink": "/events/id312321/update"
+    },
+    {
+      "name": "Новый год 2016",
+      "link": "/events/id232545",
+      "isEnded": true,
+      "updateLink": "/events/id232545/update"
+    }
+  ],
+  "places": [
+    {
+      "name": "Гвоздь",
+      "address": "улица НезнаюКакая, 21 г.Минск",
+      "link": "/places/id123123",
+      "updateLink": "/places/id123123/update"
+    }
+  ] // should be null for users with type "user"
+}

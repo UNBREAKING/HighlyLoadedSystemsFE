@@ -1,0 +1,23 @@
+//it will have query: /places/id/reserve?hours=13minutes=45 - it will be used every time user chose hours and minutes from dd
+{
+  "typesOfTables": [
+    {
+      "name": "столик на 2",
+      "available": false,
+      "id": "id123123"
+    },
+    {
+      "name": "столик на 4",
+      "available": true,
+      "id": "id123123"
+    },
+    {
+      "name": "столик на 4",
+      "available": true,
+      "id": "id123123"
+    }
+  ],
+  "placeName": "Имя заведения",
+  "userName": "имя фамилия", // null if user is anonymous
+  "userPhoneNumber": "+375(29)1233212" // null if user is anonymous
+}

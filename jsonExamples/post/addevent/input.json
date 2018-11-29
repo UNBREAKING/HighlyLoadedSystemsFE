@@ -1,0 +1,10 @@
+{
+  "name": "имя события",
+  "numberOfAllPlaces": 57,
+  "date": "23.03.2018",
+  "hoursStart": "11",
+  "minutesStart": "00",
+  "placeId": "id1231231", //can be null if place is in public,
+  "alternativeAddress": null, //string if it is in public,
+  "description": "тут много текста"
+}

@@ -1,0 +1,26 @@
+// placeLink can be null if event for example in the center of city,
+// or if it is a music festival. :)
+// events uses query to get data:
+// '/events?isEnded=true'
+// '/events?startIndex=30'
+// query can be combined
+{
+  "events": [
+    {
+      "name": "Туса-Джуса",
+      "link": "/events/id23132",
+      "isEnded": false,
+      "placeName": "какое-то место",
+      "placeLink": "/places/id3121"
+    },
+    {
+      "name": "День святого патрика",
+      "link": "/events/id312321",
+      "isEnded": true,
+      "placeName": "какое-то место",
+      "placeLink": "/places/id3121"
+    }
+  ],
+  "numberOfAllEvents": 375,
+  "nextIndexForRequest": 30 // this property answers for first index in request of events fetching
+}

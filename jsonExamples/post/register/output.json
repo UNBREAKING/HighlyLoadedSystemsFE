@@ -1,0 +1,8 @@
+//output data
+// something like user unique id, or session key. 
+//I don't how it works on BE, but we need generate it from BE and better to save this session key to cookies.
+//After registration user should be in the system 
+{
+  "status": "success"
+}
+// if user will have cookie like: sessionID it will say to FE system that we are in. On be it will always work with it 

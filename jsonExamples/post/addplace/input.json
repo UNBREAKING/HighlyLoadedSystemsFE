@@ -1,0 +1,58 @@
+//on BE it should add it to userId( only users with Type bussiness can add it)
+{
+  "name": "имя заведения",
+  "fullNumberOfPlaces": 57,
+  "address": "какой-то адрес",
+  "description": "описание",
+  "workingHours": [ //start and end can be null if it is for example weekend 
+    {
+      "day": "пн.",
+      "start":"8.00",
+      "end":"22.00"
+    },
+    {
+      "day": "вт.",
+      "start":"8.00",
+      "end":"22.00"
+    },
+    {
+      "day": "ср.",
+      "start":"8.00",
+      "end":"22.00"
+    },
+    {
+      "day": "чт.",
+      "start":"8.00",
+      "end":"22.00"
+    },
+    {
+      "day": "пт.",
+      "start":"8.00",
+      "end":"24.00"
+    },
+    {
+      "day": "сб.",
+      "start":"8.00",
+      "end":"24.00"
+    },
+    {
+      "day": "вс.",
+      "start":"8.00",
+      "end":"22.00"
+    }
+  ],
+  "typesOfTables": [
+    {
+      "name": "стол на 2",
+      "number": 3
+    },
+    {
+      "name": "стол на 4",
+      "number": 8
+    },
+    {
+      "name": "стол на 8",
+      "number": 4
+    }
+  ]
+}
