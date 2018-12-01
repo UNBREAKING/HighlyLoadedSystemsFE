@@ -1,6 +1,7 @@
 import React from 'React'
 import styled from 'styled-components'
 import { BigItemListWrapper } from '../common'
+import EventBlocks from './EventBlocks'
 
 const EventsPage = () =>
   <Wrapper>
@@ -8,7 +9,9 @@ const EventsPage = () =>
       тут будут фильтры
     </FiltersBlock>
     <Items>
-      <BigItemListWrapper text="Загрузите еще 15 событий" />
+      <BigItemListWrapper text="Загрузите еще 15 событий">
+        <EventBlocks/>
+      </BigItemListWrapper>
     </Items>
   </Wrapper>
 

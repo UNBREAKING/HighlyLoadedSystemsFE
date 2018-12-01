@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import PlaceBlock from './PlaceBlock'
+
 const PlaceBlocks = () => 
   <Fragment>
     <PlaceBlock/>
