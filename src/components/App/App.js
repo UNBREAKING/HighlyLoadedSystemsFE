@@ -6,7 +6,9 @@ import {
   Header,
   Login,
   PlacePage,
-  Modals
+  Modals,
+  PlacesPage,
+  EventsPage
 } from '../'
 
 const App = () =>
@@ -18,8 +20,8 @@ const App = () =>
         <Route exact path='/' component={HomePage} />
         <Route exact path='/home' component={HomePage} />
         <Route exact path='/about-us' component={HomePage} />
-        <Route exact path='/places' component={HomePage} />
-        <Route exact path='/events' component={HomePage} />
+        <Route exact path='/places' component={PlacesPage} />
+        <Route exact path='/events' component={EventsPage} />
         <Route exact path='/place' component={PlacePage} />
       </Switch>
     </Content>
