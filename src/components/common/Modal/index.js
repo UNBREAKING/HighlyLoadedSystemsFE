@@ -60,5 +60,8 @@ const Close = styled.span`
   }
 `
 
-const Title = styled.span`
+const Title = styled.h2`
+  display: inline-block;
+  padding: 0;
+  margin: 0;
 `

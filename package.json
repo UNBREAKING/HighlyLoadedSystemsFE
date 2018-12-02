@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "@material-ui/core": "^3.6.1",
     "connected-react-router": "^5.0.1",
     "history": "^4.7.2",
     "react-redux": "^5.1.0",
