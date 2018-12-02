@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux'
 import { reducer as reduxFormReducer } from 'redux-form';
-import { routerReducer } from 'react-router-redux'
+import { connectRouter } from 'connected-react-router'
 import { reducer as modal } from 'redux-modal'
 
-const reducers = combineReducers({
+const reducers = history => combineReducers({
   form: reduxFormReducer,
-  router: routerReducer,
+  router: connectRouter(history),
   modal
 })
 
