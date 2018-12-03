@@ -1,1 +1,2 @@
 export const LOGIN_MODAL_NAME = 'LOGIN_MODAL'
+export const REGISTER_MODAL = 'REGISTER_MODAL'

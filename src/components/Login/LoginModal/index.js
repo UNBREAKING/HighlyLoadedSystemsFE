@@ -9,7 +9,7 @@ const dispatchToProps = { hideLoginModal }
 
 export default compose(
   connectModal({ 
-  name: LOGIN_MODAL_NAME
+    name: LOGIN_MODAL_NAME
   }),
   connect(null, dispatchToProps)
 )(LoginModal)

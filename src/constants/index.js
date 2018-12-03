@@ -6,3 +6,4 @@ export const COLORS = {
 }
 
 export const LOGIN_FORM = "login"
+export const REGISTER_FORM = "register"

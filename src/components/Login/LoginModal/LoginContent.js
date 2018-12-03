@@ -1,11 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
+import { compose } from 'recompose'
+import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { reduxForm } from 'redux-form'
 import { Input, Button, Checkbox } from '../../common'
+import { hideLoginAndOpenRegisterModal } from '../actions'
 import { LOGIN_FORM, COLORS } from '../../../constants'
 
-const LoginContent = () =>
+const LoginContent = ({ hideLoginAndOpenRegisterModal }) =>
   <form>
     <Inputs>
       <Input label="почта/логин" fullWidth name="loginOrMail" />
@@ -21,15 +24,18 @@ const LoginContent = () =>
       </CheckBoxAndLink>
     </ButtonsAndLinks>
     <RegisterWrapper>
-      <RegisterButton>
+      <RegisterButton onClick={ hideLoginAndOpenRegisterModal }>
         Зарегистрироваться с помощью эл.почты
       </RegisterButton>
     </RegisterWrapper>
   </form>
 
-export default reduxForm({
-  form: LOGIN_FORM
-})(LoginContent)
+export default compose(
+  reduxForm({
+    form: LOGIN_FORM
+  }),
+  connect(null, { hideLoginAndOpenRegisterModal })
+)(LoginContent)
 
 const Inputs = styled.div`
   max-width: 600px;
