@@ -27,6 +27,10 @@ const PlacePage = () =>
 export default PlacePage
 
 const Header = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px 15px;
+  align-items: center;  
 `
 
 const Name = styled.h1`
@@ -36,9 +40,13 @@ const Name = styled.h1`
 const Carousel = styled.div`
   background: gray;
   height: 300px;
+  padding-bottom: 15px;
 `
 
 const ReserveWrapper = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px 20px;
 `
 
 const Content = styled.div`

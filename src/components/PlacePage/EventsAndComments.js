@@ -9,4 +9,7 @@ const EventsAndComments = () =>
 export default EventsAndComments
 
 const Wrapper = styled.div`
+  display: inline-block;
+  width: 50%;
+  padding: 0 20px;
 `

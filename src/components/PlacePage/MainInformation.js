@@ -12,10 +12,10 @@ const MainInformation = () =>
         Рестран, он же клуб, он же музей восковых фигур. Бла-бла-бла
       </Content>
     </Description>
+    <Header>
+      Общая информация
+    </Header>
     <CommonInfo>
-      <Header>
-        Общая информация
-      </Header>
       <InfoBlock>
         <SmallHeader>
           Адрес
@@ -80,6 +80,10 @@ const MainInformation = () =>
 export default MainInformation
 
 const Wrapper = styled.div`
+  display: inline-block;
+  width: 50%;
+  padding-left: 20px;
+  vertical-align: top;
 `
 
 const Description = styled.div`
@@ -92,6 +96,7 @@ const Content = styled.div`
 `
 
 const CommonInfo = styled.div`
+  padding-left: 20px;
 `
 
 const InfoBlock = styled.div`
