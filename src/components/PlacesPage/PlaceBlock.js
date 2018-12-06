@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { CommonLinkButton } from '../common'
 
+
 const PlaceBlock = () => 
   <Wrapper>
     <Title>
