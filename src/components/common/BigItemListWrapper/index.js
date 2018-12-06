@@ -1,16 +1,19 @@
 import React, { Fragment } from 'react'
 import styled from 'styled-components'
+import { Button } from '../'
 
 const BigItemListWrapper = ({ children, text }) =>
 <Fragment>
   { children }
-  <CommonAddButton>
+  <AddItemsToListButton>
     { text }
-  </CommonAddButton>
+  </AddItemsToListButton>
 </Fragment>
 
 export default BigItemListWrapper
 
-const CommonAddButton = styled.button`
-
+const AddItemsToListButton = styled(Button)`
+  width: 80%;
+  margin-bottom: 20px;
+  font-size: 20px;
 `

@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import { CommonLinkButton } from '../common'
 import { COLORS } from '../../constants'
 
-
 const PlaceBlock = () => 
   <Wrapper>
     <Title>

@@ -34,7 +34,6 @@ const Header = styled.div`
 `
 
 const Name = styled.h1`
-
 `
 
 const Carousel = styled.div`

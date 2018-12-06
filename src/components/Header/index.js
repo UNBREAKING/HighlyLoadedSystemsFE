@@ -22,6 +22,10 @@ const links = [
   {
     link: '/place',
     name: 'Заведение'
+  },
+  {
+    link: '/profile',
+    name: 'Профиль'
   }
 ]
 
