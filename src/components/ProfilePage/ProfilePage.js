@@ -1,6 +1,7 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import { SmallItemListWrapper } from '../common'
+import Events from './Events'
 
 const ProfilePage = ({ hidePlaces = false, hideEvents = false }) =>
   <Wrapper>
@@ -22,7 +23,7 @@ const ProfilePage = ({ hidePlaces = false, hideEvents = false }) =>
       </Column>
       <Column hide={ hideEvents }>
         <SmallItemListWrapper title="Ваши события">
-          тут будут события юзера и ссылка на страницу добавления
+          <Events />
         </SmallItemListWrapper>
       </Column>
     </PlacesAndEvents>

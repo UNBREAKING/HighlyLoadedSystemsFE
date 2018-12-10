@@ -1,11 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 import { SmallItemListWrapper } from '../common'
+import Events from './Events'
 
 const EventsAndComments = () =>
   <Wrapper>
     <SmallItemListWrapper title="События">
-      тут будут события данного заведения
+      <Events />
     </SmallItemListWrapper>
     <SmallItemListWrapper title="Комментарии">
       тут будут все комменты юзера с кнопкой добавления коммента.

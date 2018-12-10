@@ -1,23 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
+import { COLORS } from '../../../constants'
 
 const SmallItemListWrapper = ({ children, title }) =>
-  <Wrapper>
-    <Header>
+  <div>
+    <h3>
       { title }
-    </Header>
+    </h3>
     <Content>
       { children }
     </Content>
-  </Wrapper>
+  </div>
 
 export default SmallItemListWrapper
-
-const Wrapper = styled.div`
-`
-
-const Header = styled.h3`
-`
 
 const Content = styled.div`
   width: 100%;
@@ -25,4 +20,6 @@ const Content = styled.div`
   overflow-x: none;
   overflow-y: scroll;
   padding: 10px 20px;
+  border: 1px solid ${COLORS.black};
+  margin-bottom: 20px;
 `
