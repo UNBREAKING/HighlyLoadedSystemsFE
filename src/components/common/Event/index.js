@@ -1,15 +1,24 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
+import { Link } from 'react-router-dom'
 import Icon from '@material-ui/core/Icon'
 import { COLORS } from '../../../constants'
 
-const Event = ({ available = true }) => 
+const Event = ({ available = true, withUpdateLink = false }) => 
   <Wrapper available={ available }>
     <NameContainer>
       <Icon fontSize="large">
         { available ? "event_available" : "event_busy" }
       </Icon>
-      <Name> День святого патрика</Name>
+      <MainInf>
+        <Name> День святого патрика</Name>
+        {
+          withUpdateLink && 
+            <Link to="/">
+              редактировать
+            </Link>
+        }
+      </MainInf>
     </NameContainer>
     <Button>
       <Icon fontSize="large">keyboard_arrow_right</Icon>
@@ -47,8 +56,13 @@ const NameContainer = styled.div`
 `
 
 const Name = styled.span`
-  margin-left: 10px;
   font-size: 26px;
+`
+
+const MainInf = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
 `
 
 const Button = styled.button`

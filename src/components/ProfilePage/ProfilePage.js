@@ -2,6 +2,7 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 import { SmallItemListWrapper } from '../common'
 import Events from './Events'
+import Places from './Places'
 
 const ProfilePage = ({ hidePlaces = false, hideEvents = false }) =>
   <Wrapper>
@@ -18,7 +19,7 @@ const ProfilePage = ({ hidePlaces = false, hideEvents = false }) =>
     <PlacesAndEvents>
       <Column hide={ hidePlaces }>
         <SmallItemListWrapper title="Ваши заведения">
-          тут будут заведения юзера и ссылка на страницу добавления
+          <Places />
         </SmallItemListWrapper>
       </Column>
       <Column hide={ hideEvents }>

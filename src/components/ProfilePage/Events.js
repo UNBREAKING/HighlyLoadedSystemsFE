@@ -4,12 +4,12 @@ import CommonAddButton from './CommonAddButton'
 
 const Events = () => 
   <Fragment>
-    <Event />
-    <Event />
-    <Event />
-    <Event />
-    <Event />
-    <Event />
+    <Event withUpdateLink />
+    <Event withUpdateLink />
+    <Event withUpdateLink />
+    <Event withUpdateLink />
+    <Event withUpdateLink />
+    <Event withUpdateLink />
     <CommonAddButton />
   </Fragment>
 
