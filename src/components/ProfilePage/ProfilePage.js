@@ -33,12 +33,19 @@ const ProfilePage = ({ hidePlaces = false, hideEvents = false }) =>
 export default ProfilePage
 
 const Wrapper = styled.div`
+  padding: 0 20px;
 `
 
 const MainInfo = styled.div`
+  display: flex;
 `
 
 const PhotoBlock = styled.div`
+  width: 200px;
+  height: 285px;
+  margin-right:20px;
+  margin-bottom: 30px;
+  background-color: grey;
 `
 
 const PersonalInfo = styled.div`
@@ -51,10 +58,15 @@ const CommonInfoBlock = styled.div`
 `
 
 const PlacesAndEvents = styled.div`
+  display: flex;
 `
 
 const Column = styled.div`
-
+  width: 700px;
+  margin-right: 20px;
+  :last-child{
+    margin-right: 0;
+  }
   ${props => props.hide && css`
     display: none;
   `}
