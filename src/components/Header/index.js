@@ -26,6 +26,10 @@ const links = [
   {
     link: '/profile',
     name: 'Профиль'
+  },
+  {
+    link: '/add-place',
+    name: 'Add Place'
   }
 ]
 

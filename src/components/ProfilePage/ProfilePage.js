@@ -59,6 +59,7 @@ const CommonInfoBlock = styled.div`
 
 const PlacesAndEvents = styled.div`
   display: flex;
+  justify-content: space-around;
 `
 
 const Column = styled.div`

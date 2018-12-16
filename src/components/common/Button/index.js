@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { COLORS } from '../../../constants'
 
-const Button = ({ children, className, onClick }) =>
-  <Wrapper className={className} onClick={onClick}>
+const Button = ({ children, className, onClick, type }) =>
+  <Wrapper className={className} onClick={onClick} type={ type || "button" }>
     {children}
   </Wrapper>
 

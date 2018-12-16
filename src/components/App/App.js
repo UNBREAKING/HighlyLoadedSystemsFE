@@ -9,7 +9,8 @@ import {
   Modals,
   PlacesPage,
   EventsPage,
-  ProfilePage
+  ProfilePage,
+  AddPlacePage
 } from '../'
 
 const App = () =>
@@ -25,6 +26,7 @@ const App = () =>
         <Route exact path='/events' component={EventsPage} />
         <Route exact path='/place' component={PlacePage} />
         <Route exact path='/profile' component={ProfilePage} />
+        <Route exact path='/add-place' component={AddPlacePage} />
       </Switch>
     </Content>
     <Modals />

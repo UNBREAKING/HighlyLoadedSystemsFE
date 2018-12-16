@@ -11,14 +11,25 @@ const theme = createMuiTheme({
   typography: { useNextVariants: true },
 });
 
-const commonInput = ({ input, label, password, number, ...props }) =>
+const commonInput = ({ 
+  input, 
+  label, 
+  password, 
+  number,
+  date,
+  ...props 
+}) =>
   <MuiThemeProvider theme={theme}>
     <TextField
       id={ label }
       label={ label }
+      rows="6"
       margin="normal"
       { ...input }
       { ...props }
+      { ...date && 
+          ({ type: "date", InputLabelProps: { shrink: true } }) 
+      }
       { ...password && ({ type: "password" }) }
       { ...number && ({ type: "number" }) } />
   </MuiThemeProvider>
