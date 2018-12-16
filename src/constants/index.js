@@ -10,6 +10,8 @@ export const LOGIN_FORM = "login"
 export const REGISTER_FORM = "register"
 export const ADD_PLACE_FORM = "addPlace"
 export const ADD_EVENT_FORM = "addEvent"
+export const PLACES_FILTERS = "filtersPlaces"
+export const EVENTS_FILTERS = "filtersEvents"
 
 export const MINUTES = new Array(4).fill(1)
   .map((item, index) => 

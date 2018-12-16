@@ -2,11 +2,12 @@ import React from 'React'
 import styled from 'styled-components'
 import { BigItemListWrapper } from '../common'
 import PlaceBlocks from './PlaceBlocks'
+import Filters from './Filters'
 
 const PlacesPage = () =>
   <Wrapper>
     <FiltersBlock>
-      тут будут фильтры
+      <Filters />
     </FiltersBlock>
     <Items>
       <BigItemListWrapper text="Загрузите еще 15 мест">

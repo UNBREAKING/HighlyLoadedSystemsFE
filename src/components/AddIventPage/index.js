@@ -8,6 +8,6 @@ import AddIventPage from './AddIventPage'
 export default compose(
   connect(null),
   reduxForm({
-  form: ADD_EVENT_FORM
+    form: ADD_EVENT_FORM
   })
 )(AddIventPage)
