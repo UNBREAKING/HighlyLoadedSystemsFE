@@ -1,8 +1,8 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import { SmallItemListWrapper } from '../common'
+import { SmallItemListWrapper, Places } from '../common'
 import Events from './Events'
-import Places from './Places'
+import CommonAddButton from './CommonAddButton'
 
 const ProfilePage = ({ hidePlaces = false, hideEvents = false }) =>
   <Wrapper>
@@ -20,6 +20,7 @@ const ProfilePage = ({ hidePlaces = false, hideEvents = false }) =>
       <Column hide={ hidePlaces }>
         <SmallItemListWrapper title="Ваши заведения">
           <Places />
+          <CommonAddButton />
         </SmallItemListWrapper>
       </Column>
       <Column hide={ hideEvents }>

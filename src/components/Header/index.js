@@ -30,6 +30,11 @@ const links = [
   {
     link: '/add-place',
     name: 'Add Place'
+  },
+  ,
+  {
+    link: '/add-event',
+    name: 'Add Event'
   }
 ]
 

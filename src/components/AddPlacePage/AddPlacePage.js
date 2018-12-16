@@ -1,23 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Input, Button } from '../common'
+import { Input, HeaderWithButton } from '../common'
 import WorkingHours from './WorkingHours'
 import SeatAdder from './SeatAdder'
 
 const AddPlacePage = () =>
   <Wrapper>
-    <Header>
-      <Title>
-        Создание заведения
-      </Title>
-      <Button>
-        Сохранить
-      </Button>
-    </Header>
+    <HeaderWithButton title="Создание заведения" buttonText="Сохранить" />
     <Content>
       <LeftContent>
         <Input label="Название заведния" fullWidth name="name" />
-        <Input label="Количество свободных мест" fullWidth name="numberOfPlaces" />
+        <Input label="Количество свободных мест" fullWidth name="numberOfAllPlaces" />
         <Input label="Адрес" fullWidth name="address" />
         <Input label="Описание" multiline fullWidth name="description" />
         <SeatAdder />
@@ -32,15 +25,6 @@ export default AddPlacePage
 
 const Wrapper = styled.form`
   padding: 0 40px;
-`
-
-const Header = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`
-
-const Title = styled.h1`
 `
 
 const Content = styled.div`
