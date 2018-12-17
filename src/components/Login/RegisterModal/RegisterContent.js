@@ -25,12 +25,19 @@ const RegisterContent = ({ hideRegisterModalAndOpenLoginModal, register }) =>
       <Input label="фамилия" fullWidth name="surname" />
       <Input label="номер телефона" number fullWidth name="phonenumber" />
       <RadioGroup name="sex" elements={ elements } />
-      <Input label="почта" fullWidth name="mail" />
+      <Input label="почта" fullWidth name="email" />
+      <Input label="логин" fullWidth name="login" />
       <Input label="пароль" password fullWidth name="password" />
     </Inputs>
     <Buttons>
-      <Button onClick={ register }>Зарегистрироваться</Button>
-      <SecondButton>Зарегистрировать бизнес</SecondButton>
+      <Button
+        onClick={ () => register("GENERAL_CLIENT") }>
+        Зарегистрироваться
+      </Button>
+      <SecondButton
+        onClick={ () => register("BUSINESS_CLIENT") }>
+        Зарегистрировать бизнес
+      </SecondButton>
     </Buttons>
     <RegisterWrapper>
       <RegisterButton onClick={ hideRegisterModalAndOpenLoginModal }>

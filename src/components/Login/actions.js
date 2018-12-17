@@ -1,4 +1,5 @@
 import { show, hide } from 'redux-modal'
+import { createAction } from 'redux-actions'
 import { LOGIN_MODAL_NAME, REGISTER_MODAL } from './constants'
 import endpoints from '../../endpoints'
 
@@ -20,17 +21,41 @@ export const hideRegisterModalAndOpenLoginModal = () => dispatch => {
   dispatch(openLoginModal())
 }
 
-export const register = () => dispatch => {
+export const userIsSignedIn = createAction('LOGIN/SIGN_IN')
+
+export const register = (roleName = "GENERAL_CLIENT") => (dispatch, getState) => {
   const { register } = endpoints
 
+  const {
+    form: {
+      register: {
+        values: {
+          name,
+          surname,
+          phonenumber,
+          sex,
+          email,
+          password,
+          login
+        }
+      } = {}
+    } = {}
+  } = getState()
+
   register({ 
-    email: "aaa",
-    login: "sss",
-    name: "sadss",
-    password: "oooo",
-    phonenumber: "312",
-    roleName: "GENERAL_CLIENT",
-    sex: "male",
-    surname: "asdasdsds"
+    email,
+    login,
+    name,
+    password,
+    phonenumber,
+    roleName,
+    sex,
+    surname
+  }).
+  then(({ status }) => {
+    if (status === 'success') {
+      dispatch(hideRegisterModal())
+      dispatch(userIsSignedIn())
+    }
   })
 }

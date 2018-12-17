@@ -1,12 +1,24 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import styled from 'styled-components'
+import Icon from '@material-ui/core/Icon'
 import { Button } from '../common'
 
-const Login = ({ openLoginModal }) =>
+const Login = ({ openLoginModal, isUserSignedIn }) =>
   <Wrapper>
-    <Button onClick={ openLoginModal } >
-      Вход/Регистрация
-    </Button>
+    {
+      isUserSignedIn ?
+        <Fragment>
+          <Button>
+            Выйти из профиля
+          </Button>
+          <Icon fontSize="large">
+            person
+          </Icon>
+        </Fragment> :
+        <Button onClick={ openLoginModal } >
+          Вход/Регистрация
+        </Button>
+    }
   </Wrapper>
 
 export default Login
