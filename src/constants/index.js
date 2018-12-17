@@ -3,7 +3,8 @@ export const COLORS = {
   lightblue: '#6BAAFF',
   linkblue: '#007bff',
   lightred: 'rgba(220, 57, 57, 0.6)',
-  black: 'black'
+  black: 'black',
+  gray: '#9C9C9C'
 }
 
 export const LOGIN_FORM = "login"
@@ -12,6 +13,7 @@ export const ADD_PLACE_FORM = "addPlace"
 export const ADD_EVENT_FORM = "addEvent"
 export const PLACES_FILTERS = "filtersPlaces"
 export const EVENTS_FILTERS = "filtersEvents"
+export const RESERVE_TIME = 'reserveTime'
 
 export const MINUTES = new Array(4).fill(1)
   .map((item, index) => 

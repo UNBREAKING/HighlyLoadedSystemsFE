@@ -31,10 +31,17 @@ const links = [
     link: '/add-place',
     name: 'Add Place'
   },
-  ,
   {
     link: '/add-event',
     name: 'Add Event'
+  },
+  {
+    link: '/reserve-place',
+    name: 'Re Place'
+  },
+  {
+    link: '/reserve-event',
+    name: 'Re Event'
   }
 ]
 
