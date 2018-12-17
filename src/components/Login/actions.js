@@ -1,5 +1,6 @@
 import { show, hide } from 'redux-modal'
 import { LOGIN_MODAL_NAME, REGISTER_MODAL } from './constants'
+import endpoints from '../../endpoints'
 
 export const openLoginModal = () => dispatch => dispatch(show(LOGIN_MODAL_NAME))
 
@@ -17,4 +18,19 @@ export const hideLoginAndOpenRegisterModal = () => dispatch => {
 export const hideRegisterModalAndOpenLoginModal = () => dispatch => {
   dispatch(hideRegisterModal())
   dispatch(openLoginModal())
+}
+
+export const register = () => dispatch => {
+  const { register } = endpoints
+
+  register({ 
+    email: "aaa",
+    login: "sss",
+    name: "sadss",
+    password: "oooo",
+    phonenumber: "312",
+    roleName: "GENERAL_CLIENT",
+    sex: "make",
+    surname: "asdasdsds"
+  })
 }

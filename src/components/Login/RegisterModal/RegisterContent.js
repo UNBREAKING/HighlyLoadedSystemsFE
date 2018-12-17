@@ -4,7 +4,7 @@ import { compose } from 'recompose'
 import { connect } from 'react-redux'
 import { reduxForm } from 'redux-form'
 import { Input, Button, RadioGroup } from '../../common'
-import { hideRegisterModalAndOpenLoginModal } from '../actions'
+import { hideRegisterModalAndOpenLoginModal, register } from '../actions'
 import { REGISTER_FORM, COLORS } from '../../../constants'
 
 const elements = [
@@ -18,7 +18,7 @@ const elements = [
   }
 ]
 
-const RegisterContent = ({ hideRegisterModalAndOpenLoginModal }) =>
+const RegisterContent = ({ hideRegisterModalAndOpenLoginModal, register }) =>
   <form>
     <Inputs>
       <Input label="имя" fullWidth name="name" />
@@ -29,7 +29,7 @@ const RegisterContent = ({ hideRegisterModalAndOpenLoginModal }) =>
       <Input label="пароль" password fullWidth name="password" />
     </Inputs>
     <Buttons>
-      <Button>Зарегистрироваться</Button>
+      <Button onClick={ register }>Зарегистрироваться</Button>
       <SecondButton>Зарегистрировать бизнес</SecondButton>
     </Buttons>
     <RegisterWrapper>
@@ -43,7 +43,7 @@ export default compose(
   reduxForm({
     form: REGISTER_FORM
   }),
-  connect(null, { hideRegisterModalAndOpenLoginModal })
+  connect(null, { hideRegisterModalAndOpenLoginModal, register })
 )(RegisterContent)
 
 const Inputs = styled.div`
