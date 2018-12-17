@@ -6,8 +6,8 @@ const timeout = 2000
 const headers = {
   'Content-Type' : 'application/json',
   'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
-  'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token'
+  'Access-Control-Allow-Headers': 'X-Requested-With',
+  'Access-Control-Allow-Methods': 'POST, GET, PUT, DELETE, OPTIONS'
 }
 
 const axiosInstance = axios.create({
@@ -24,8 +24,6 @@ Object.keys(api)
     const { url, method } = api[key]
 
     endpoints[key] = (...args) => {
-      console.log(args)
-      console.log(method)
       return axiosInstance[method](url, ...args)
         .catch( err => {
           console.log(err)

@@ -30,7 +30,7 @@ export const register = () => dispatch => {
     password: "oooo",
     phonenumber: "312",
     roleName: "GENERAL_CLIENT",
-    sex: "make",
+    sex: "male",
     surname: "asdasdsds"
   })
 }
