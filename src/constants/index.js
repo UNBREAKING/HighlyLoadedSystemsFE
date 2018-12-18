@@ -1,10 +1,15 @@
 export const COLORS = {
   orange: '#ffb488',
+  white: '#ffff',
   lightblue: '#6BAAFF',
   linkblue: '#007bff',
   lightred: 'rgba(220, 57, 57, 0.6)',
   black: 'black',
-  gray: '#9C9C9C'
+  gray: '#9C9C9C',
+  darkGray: 'rgb(72, 72, 72)',
+  green: 'rgb(0, 132, 137)',
+  darkGreen: 'rgb(0, 97, 101)',
+  darkred: 'rgb(166, 29, 85)'
 }
 
 export const LOGIN_FORM = "login"

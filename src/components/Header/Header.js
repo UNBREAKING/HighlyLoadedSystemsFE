@@ -26,16 +26,15 @@ const Header = ({ links, indexOfMenuItem, setMenuItem }) =>
 export default Header
 
 const Wrapper = styled.div`
-  background: ${COLORS.orange};
   padding: 20px 0;
   width: 100%;
-  box-shadow: 0 0 10px ${COLORS.black};
+  box-shadow: 0 0 2px 0px ${COLORS.gray};
   position: fixed;
   z-index: 1000;
 `
 
 const LinkButton = styled(Link)`
-  color: ${COLORS.black};
+  color: ${COLORS.darkGray};
   font-size: 20px;
   padding: 10px 20px;
   text-decoration:none;
@@ -43,17 +42,17 @@ const LinkButton = styled(Link)`
 `
 
 const Links = styled.div`
-  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 0 2px 0px  ${COLORS.gray};
 `
 
 const LinkWrapper = styled.div`
   display: inline-block;
-  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  border-right: 1px solid ${COLORS.gray};
   transition: 0.3s background ease;
   :hover {
-    background: ${COLORS.lightblue};
+    background: ${COLORS.darkred};
     ${LinkButton} {
-      color: ${COLORS.black};
+      color: ${COLORS.white};
       text-decoration:none;
     }
   }
@@ -61,7 +60,11 @@ const LinkWrapper = styled.div`
     border-right: none;
   }
   ${props => props.selected && css`
-    background: ${COLORS.lightblue};
+    background: ${COLORS.darkred};
+    ${LinkButton} {
+      color: ${COLORS.white};
+      text-decoration:none;
+    }
   `}
 `
 

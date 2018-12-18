@@ -20,6 +20,7 @@ const Content = styled.div`
   overflow-x: none;
   overflow-y: scroll;
   padding: 10px 20px;
-  border: 1px solid ${COLORS.black};
+  border: 1px solid ${COLORS.gray};
+  box-shadow: 0 0 2px 0px  ${COLORS.gray};
   margin-bottom: 20px;
 `

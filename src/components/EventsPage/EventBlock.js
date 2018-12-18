@@ -26,12 +26,13 @@ export default EventBlock
 
 const Wrapper = styled.div`
   width: 80%;
-  border: 3px solid ${COLORS.black};
+  border: 1px solid ${COLORS.gray};
+  box-shadow: 0 0 2px 0px  ${COLORS.gray};
   border-radius: 10px;
   margin-bottom: 20px;
   padding: 10px 20px;
   :hover {
-    border-color: ${COLORS.lightblue};
+    border-color: ${COLORS.green};
   }
 `
 

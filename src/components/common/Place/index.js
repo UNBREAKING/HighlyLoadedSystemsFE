@@ -36,7 +36,8 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid ${COLORS.black};
+  border: 1px solid ${COLORS.gray};
+  box-shadow: 0 0 2px 0px  ${COLORS.gray};
   border-radius: 4px;
   padding: 20px 10px;
   margin-bottom: 10px;
@@ -46,7 +47,7 @@ const Wrapper = styled.div`
   }
   
   :hover {
-    border-color: ${COLORS.lightblue};
+    border-color: ${COLORS.green};
   }
 `
 

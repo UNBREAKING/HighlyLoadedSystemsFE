@@ -12,8 +12,8 @@ export default CommonLinkButton
 
 const Wrapper = styled(Link)`
   display: inline-block;
-  color: ${COLORS.black};
-  background: ${COLORS.orange};
+  color: ${COLORS.white};
+  background: ${COLORS.green};
   font-size: 20px;
   padding: 10px 20px;
   text-decoration:none;
@@ -21,11 +21,11 @@ const Wrapper = styled(Link)`
   transition: 0.3s background ease;
   border-radius: 3px;
   cursor: pointer;
-  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 1px 5px 0px ${COLORS.gray}, 0px 2px 2px 0px ${COLORS.gray}, 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
 
   &:hover{
-    background: ${COLORS.lightblue};
-    color: ${COLORS.black};
+    background: ${COLORS.darkGreen};
+    color: ${COLORS.white};
     text-decoration:none;
   }
 `
