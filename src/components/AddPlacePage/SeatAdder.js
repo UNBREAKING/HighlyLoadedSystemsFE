@@ -1,8 +1,9 @@
 import React, { Fragment } from 'react'
 import styled from 'styled-components'
-import { Input, Button } from '../common'
 import Icon from '@material-ui/core/Icon'
 import { FieldArray } from 'redux-form'
+import { Input, Button } from '../common'
+import { COLORS } from '../../constants'
 
 const Seat = ({ seat, onClick }) => 
   <SeatWrapper>
@@ -54,10 +55,12 @@ const RemoveButton = styled(Button)`
   padding: 0;
   margin: 0;
   box-shadow: none;
+  color: ${COLORS.green};
   
   &:hover {
     background: none;
     border: none;
+    color: ${COLORS.darkGreen};
   }
 `
 const InputWrapper = styled.span`

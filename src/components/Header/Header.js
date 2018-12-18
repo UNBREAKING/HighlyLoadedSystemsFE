@@ -28,6 +28,7 @@ export default Header
 const Wrapper = styled.div`
   padding: 20px 0;
   width: 100%;
+  background: ${COLORS.white};
   box-shadow: 0 0 2px 0px ${COLORS.gray};
   position: fixed;
   z-index: 1000;

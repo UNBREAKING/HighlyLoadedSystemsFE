@@ -6,7 +6,7 @@ import InputLabel from '@material-ui/core/InputLabel'
 import Input from '@material-ui/core/Input'
 import FormControl from '@material-ui/core/FormControl'
 import MenuItem from '@material-ui/core/MenuItem'
-import lightBlue from '@material-ui/core/colors/lightBlue'
+import teal from '@material-ui/core/colors/teal'
 
 const styles = theme => ({
   formControl: {
@@ -17,7 +17,7 @@ const styles = theme => ({
 
 const theme = createMuiTheme({
   palette: {
-    primary: lightBlue
+    primary: teal
   },
   typography: { useNextVariants: true },
 });

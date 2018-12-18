@@ -43,17 +43,24 @@ const Wrapper = styled.div`
 const SelectButton = styled(Button)`
   background: none;
   margin-bottom: 20px;
+  color: ${COLORS.darkGray};
 
   &:last-child {
     margin-bottom: 0;
   }
 
+  &:hover {
+    color: ${COLORS.white};
+  }
+
   &:disabled {
     background: ${COLORS.gray};
+    color: ${COLORS.white};
   }
 
   ${props => props.selected && css`
-    background: ${COLORS.lightblue};
+    background: ${COLORS.green};
+    color: ${COLORS.white};
   `}
 `
 

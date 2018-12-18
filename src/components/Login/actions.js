@@ -49,7 +49,12 @@ export const signin = () => (dispatch, getState) => {
     } = {}
   } = getState()
 
-  signIn({ login: loginOrMail, password }).then(() => dispatch(userIsSignedIn()))
+  signIn({ login: loginOrMail, password }).then(({ status }) => {
+    if (status === 'success') {
+      dispatch(hideLoginModal())
+      dispatch(userIsSignedIn())
+    }
+  })
 }
 
 export const register = (roleName = "GENERAL_CLIENT") => (dispatch, getState) => {

@@ -2,11 +2,11 @@ import React from 'react'
 import { Field } from 'redux-form'
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles'
 import TextField from '@material-ui/core/TextField'
-import lightBlue from '@material-ui/core/colors/lightBlue'
+import teal from '@material-ui/core/colors/teal'
 
 const theme = createMuiTheme({
   palette: {
-    primary: lightBlue
+    primary: teal
   },
   typography: { useNextVariants: true },
 });

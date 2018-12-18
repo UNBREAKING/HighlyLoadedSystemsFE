@@ -3,14 +3,13 @@ import { Field } from 'redux-form'
 import Checkbox from '@material-ui/core/Checkbox'
 import { withStyles } from '@material-ui/core/styles'
 import FormControlLabel from '@material-ui/core/FormControlLabel'
-import orange from '@material-ui/core/colors/orange'
-import blue from '@material-ui/core/colors/blue'
+import teal from '@material-ui/core/colors/teal'
 
 const styles = {
   root: {
-    color: orange[600],
+    color: teal[600],
     '&$checked': {
-      color: blue[500],
+      color: teal[800],
     },
   },
   checked: {},
