@@ -22,6 +22,35 @@ export const hideRegisterModalAndOpenLoginModal = () => dispatch => {
 }
 
 export const userIsSignedIn = createAction('LOGIN/SIGN_IN')
+export const checkIfUserIsSignedIn = createAction('LOGIN/CHECK_ON_SIGN_IN')
+export const removeSiginIn = createAction('LOGIN/SIGN_OUT')
+
+export const signout = () => dispatch => {
+  const { signOut } = endpoints
+
+  signOut().then(({ status }) => { 
+    if (status === 'success') {
+      dispatch(removeSiginIn())
+    }
+  })
+}
+
+export const signin = () => (dispatch, getState) => {
+  const { signIn } = endpoints
+
+  const { 
+    form: {
+      login: {
+        values: {
+          loginOrMail,
+          password
+        } = {}
+      } = {}
+    } = {}
+  } = getState()
+
+  signIn({ login: loginOrMail, password }).then(() => dispatch(userIsSignedIn()))
+}
 
 export const register = (roleName = "GENERAL_CLIENT") => (dispatch, getState) => {
   const { register } = endpoints

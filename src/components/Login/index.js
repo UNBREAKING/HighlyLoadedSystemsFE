@@ -1,27 +1,23 @@
 import { connect } from 'react-redux'
 import { compose, lifecycle } from 'recompose'
-import { openLoginModal, userIsSignedIn } from './actions'
-import { getSessionCookie } from '../../helpers'
+import { openLoginModal, checkIfUserIsSignedIn, signout } from './actions'
 import Login from './Login'
 
 const mapStateToProps = ({ login: { isUserSignedIn } = {} }) => ({ isUserSignedIn })
 
 const dispatchToProps = {
   openLoginModal,
-  userIsSignedIn
+  checkIfUserIsSignedIn,
+  signout
 }
 
 export default compose(
   connect(mapStateToProps, dispatchToProps),
   lifecycle({
     componentDidMount() {
-      const { userIsSignedIn } = this.props
-
-      console.log(getSessionCookie())
+      const { checkIfUserIsSignedIn } = this.props
       
-      if(getSessionCookie()) {
-        userIsSignedIn()
-      }
+      checkIfUserIsSignedIn()
     }
   })
 )(Login)

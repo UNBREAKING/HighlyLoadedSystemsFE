@@ -10,11 +10,11 @@ import { REGISTER_FORM, COLORS } from '../../../constants'
 const elements = [
   {
     value: "male",
-    label: "Male"
+    label: "Мужчина"
   },
   {
     value: "female",
-    label: "Female"
+    label: "Женщина"
   }
 ]
 

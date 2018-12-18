@@ -5,17 +5,17 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { reduxForm } from 'redux-form'
 import { Input, Button, Checkbox } from '../../common'
-import { hideLoginAndOpenRegisterModal } from '../actions'
+import { hideLoginAndOpenRegisterModal, signin } from '../actions'
 import { LOGIN_FORM, COLORS } from '../../../constants'
 
-const LoginContent = ({ hideLoginAndOpenRegisterModal }) =>
+const LoginContent = ({ hideLoginAndOpenRegisterModal, signin }) =>
   <form>
     <Inputs>
-      <Input label="почта/логин" fullWidth name="loginOrMail" />
-      <Input label="пароль" fullWidth name="password" />
+      <Input label="почта" fullWidth name="loginOrMail" />
+      <Input label="пароль" fullWidth password name="password" />
     </Inputs>
     <ButtonsAndLinks>
-      <Button>Войти</Button>
+      <Button onClick={ signin }>Войти</Button>
       <CheckBoxAndLink>
         <Checkbox label="Запомнить" name="remember"/>
         <ForgotPassword to="/home">
@@ -34,7 +34,7 @@ export default compose(
   reduxForm({
     form: LOGIN_FORM
   }),
-  connect(null, { hideLoginAndOpenRegisterModal })
+  connect(null, { hideLoginAndOpenRegisterModal, signin })
 )(LoginContent)
 
 const Inputs = styled.div`

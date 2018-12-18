@@ -6,15 +6,24 @@ import { routerMiddleware } from 'connected-react-router'
 import createHistory from 'history/createBrowserHistory'
 import thunk from 'redux-thunk'
 import reducers from './reducers/reducers'
+import SignInMiddleware from './components/Login/middleware'
 import { App } from './components'
 
 const history = createHistory()
-const middleware = routerMiddleware(history)
+const RouterMiddleware = routerMiddleware(history)
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+const middleware = [
+  thunk,
+  RouterMiddleware,
+  SignInMiddleware
+]
+
+const enhancer = composeEnhancers(applyMiddleware(...middleware))
 
 const store = createStore(
   reducers(history),
-  composeEnhancers(applyMiddleware(thunk, middleware))
+  enhancer
 );
 
 const Application = () =>

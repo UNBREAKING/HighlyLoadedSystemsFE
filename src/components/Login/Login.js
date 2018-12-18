@@ -3,12 +3,12 @@ import styled from 'styled-components'
 import Icon from '@material-ui/core/Icon'
 import { Button } from '../common'
 
-const Login = ({ openLoginModal, isUserSignedIn }) =>
+const Login = ({ openLoginModal, isUserSignedIn, signout }) =>
   <Wrapper>
     {
       isUserSignedIn ?
         <Fragment>
-          <Button>
+          <Button onClick={ signout }>
             Выйти из профиля
           </Button>
           <Icon fontSize="large">
