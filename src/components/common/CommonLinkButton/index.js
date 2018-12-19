@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { COLORS } from '../../../constants'
 
-const CommonLinkButton = ({ children, to }) =>
-  <Wrapper to={ to }>
+const CommonLinkButton = ({ children, to = '/', className }) =>
+  <Wrapper className={ className } to={ to }>
     { children }
   </Wrapper>
 

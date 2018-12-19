@@ -1,16 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
 import Icon from '@material-ui/core/Icon'
-import { Button } from '../common'
+import { getTrueUrl } from '../../helpers'
+import { CommonLinkButton } from '../common'
 
-const CommonAddButton = () =>
-  <AddButton>
+const CommonAddButton = ({ to }) =>
+  <AddButton to={ getTrueUrl(to) }>
     <Icon fontSize="large">add_box</Icon>
   </AddButton>
 
 export default CommonAddButton
 
-const AddButton = styled(Button)`
+const AddButton = styled(CommonLinkButton)`
   display: block;
   width: 100%;
+  text-align: center;
 `

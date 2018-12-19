@@ -4,23 +4,37 @@ import { SmallItemListWrapper, Places } from '../common'
 import Events from './Events'
 import CommonAddButton from './CommonAddButton'
 
-const ProfilePage = ({ hidePlaces = false, hideEvents = false }) =>
+const ProfilePage = ({ 
+  hidePlaces = false, 
+  hideEvents = false,
+  currentUserProfile: {
+    name = "",
+    email,
+    surnname = "",
+    sex = "",
+    _links: {
+      linkToAddPlace: { 
+        href = '/'
+      } = {}
+    } = {} 
+  } = {}
+}) =>
   <Wrapper>
     <MainInfo>
       <PhotoBlock>
         это блок конкретной ширины и высоты, тут будет фотка, если фотки нет - будет заменитель
       </PhotoBlock>
       <PersonalInfo>
-        <Name>Дмитрий Ларин</Name>
-        <CommonInfoBlock>Почта: larin@gmail.com</CommonInfoBlock>
-        <CommonInfoBlock>Пол: мужской</CommonInfoBlock>
+        <Name>{ `${name} ${surnname}` }</Name>
+        <CommonInfoBlock>Почта: { email }</CommonInfoBlock>
+        <CommonInfoBlock>Пол: { sex } </CommonInfoBlock>
       </PersonalInfo>
     </MainInfo>
     <PlacesAndEvents>
       <Column hide={ hidePlaces }>
         <SmallItemListWrapper title="Ваши заведения">
           <Places />
-          <CommonAddButton />
+          <CommonAddButton to={ href } />
         </SmallItemListWrapper>
       </Column>
       <Column hide={ hideEvents }>

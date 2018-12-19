@@ -25,11 +25,11 @@ const App = () =>
         <Route exact path='/' component={HomePage} />
         <Route exact path='/home' component={HomePage} />
         <Route exact path='/about-us' component={HomePage} />
-        <Route exact path='/places' component={PlacesPage} />
+        <Route exact path='/place/all' component={PlacesPage} />
         <Route exact path='/events' component={EventsPage} />
         <Route exact path='/place' component={PlacePage} />
         <Route exact path='/profile' component={ProfilePage} />
-        <Route exact path='/add-place' component={AddPlacePage} />
+        <Route exact path='/place/add' component={AddPlacePage} />
         <Route exact path='/add-event' component={AddIventPage} />
         <Route exact path='/reserve-place' component={ReservePlace} />
         <Route exact path='/reserve-event' component={ReserveEvent} />

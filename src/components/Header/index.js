@@ -8,11 +8,7 @@ const links = [
     name: 'Главная'
   },
   {
-    link: '/about-us',
-    name: 'О нас'
-  },
-  {
-    link: '/places',
+    link: '/place/all',
     name: 'Подбор заведения'
   },
   {

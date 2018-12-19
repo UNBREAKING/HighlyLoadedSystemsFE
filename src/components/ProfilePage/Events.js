@@ -1,8 +1,10 @@
 import React, { Fragment } from 'react'
+import { connect } from 'react-redux'
 import { Event } from '../common'
 import CommonAddButton from './CommonAddButton'
 
-const Events = () => 
+
+const Events = ({ href = '/' }) => 
   <Fragment>
     <Event withUpdateLink />
     <Event withUpdateLink />
@@ -10,7 +12,19 @@ const Events = () =>
     <Event withUpdateLink />
     <Event withUpdateLink />
     <Event withUpdateLink />
-    <CommonAddButton />
+    <CommonAddButton to={ href } />
   </Fragment>
 
-export default Events
+const mapStateToProps = ({ 
+  profiles: {
+    currentUserProfile: { 
+      _links: {
+        linkToAddEvent: { 
+          href = '/'
+        } = {}
+      } = {} 
+    } = {} 
+  } = {}
+}) => ({ href })
+
+export default connect(mapStateToProps)(Events)
