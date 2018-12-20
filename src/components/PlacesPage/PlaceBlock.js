@@ -3,8 +3,15 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { CommonLinkButton } from '../common'
 import { COLORS } from '../../constants'
+import { getPlaceUrl } from '../../helpers'
 
-const PlaceBlock = ({ shortDescription, name, address, time, links }) => 
+const PlaceBlock = ({ 
+  shortDescription, 
+  name, 
+  address, 
+  time, 
+  links: [{}, { href = '/' }] = []
+}) => 
   <Wrapper>
     <Title>
       { name }
@@ -19,7 +26,7 @@ const PlaceBlock = ({ shortDescription, name, address, time, links }) =>
       <LastWorkingHour>
         до 23.00
       </LastWorkingHour>
-      <CommonLinkButton to="/place">
+      <CommonLinkButton to={ getPlaceUrl(href) }>
         Подробнее
       </CommonLinkButton>
     </CommonInfoWithLink>

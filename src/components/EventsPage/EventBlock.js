@@ -3,8 +3,9 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { CommonLinkButton } from '../common'
 import { COLORS } from '../../constants'
+import { getEventUrl } from '../../helpers'
 
-const EventBlock = ({ name, links }) => 
+const EventBlock = ({ name, links: [{}, { href }] = [] }) => 
   <Wrapper>
     <Title>
       { name }
@@ -16,7 +17,7 @@ const EventBlock = ({ name, links }) =>
       <LastWorkingHour>
         до 23.00
       </LastWorkingHour>
-      <CommonLinkButton to="/place">
+      <CommonLinkButton to={ getEventUrl(href) }>
         Подробнее
       </CommonLinkButton>
     </CommonInfoWithLink>
