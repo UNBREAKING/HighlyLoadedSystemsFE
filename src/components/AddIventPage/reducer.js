@@ -1,12 +1,14 @@
 import { handleActions } from 'redux-actions'
-import { addUserPlaces } from './actions'
+import { addUserPlaces, selectPlace } from './actions'
 
 const initialState = {
-  places: []
+  places: [],
+  selectedId: null
 }
 
 const userPlaces = handleActions({
-  [addUserPlaces]: (state, { payload }) => ({ ...state, places: payload })
+  [addUserPlaces]: (state, { payload }) => ({ ...state, places: payload }),
+  [selectPlace]: (state, { payload }) => ({ ...state, selectedId: payload })
 }, initialState)
 
 export default userPlaces

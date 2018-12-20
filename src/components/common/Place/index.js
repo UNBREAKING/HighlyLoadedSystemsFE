@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 import Icon from '@material-ui/core/Icon'
 import { COLORS } from '../../../constants'
 
-const Place = ({ withUpdateLink = false, name, address, placeId }) => 
-  <Wrapper>
+const Place = ({ withUpdateLink = false, name, address, placeId, onClick }) => 
+  <Wrapper onClick={ onClick }>
     <InfoContainer>
       <Icon fontSize="large">
         image

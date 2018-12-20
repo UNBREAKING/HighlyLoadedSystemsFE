@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom'
 import Icon from '@material-ui/core/Icon'
 import { COLORS } from '../../../constants'
 
-const Event = ({ available = true, withUpdateLink = false }) => 
+const Event = ({ available = true, withUpdateLink = false, name }) => 
   <Wrapper available={ available }>
     <NameContainer>
       <Icon fontSize="large">
         { available ? "event_available" : "event_busy" }
       </Icon>
       <MainInf>
-        <Name> День святого патрика</Name>
+        <Name>{ name }</Name>
         {
           withUpdateLink && 
             <Link to="/">

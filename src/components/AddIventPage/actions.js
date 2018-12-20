@@ -21,3 +21,41 @@ export const getProfile = () => dispatch => {
       }
     })
 }
+
+export const selectPlace = createAction('ADD_EVENT/SET_PLACE')
+
+export const addEvent = () => (dispatch, getState) => {
+  const { addEvent } = endpoints
+
+  const {
+    userPlaces: {
+      selectedId
+    },
+    form: {
+      addEvent: {
+        values: {
+          date,
+          name,
+          numberOfAllPlaces,
+          description,
+          hoursStart,
+          minutesStart: minuteStart,
+          alternativeAddress
+        } = {}
+      } = {}
+    } = {}
+  } = getState()
+
+  addEvent({
+    alternativeAddress,
+    date,
+    description,
+    hoursStart,
+    minuteStart,
+    name,
+    numberOfAllPlaces,
+    placeId: selectedId,
+    price: 0,
+    rating: 0
+  }).then(() => dispatch(push('/user-profile')) )
+}

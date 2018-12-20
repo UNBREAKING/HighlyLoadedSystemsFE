@@ -50,8 +50,8 @@ const CommonSelect = ({ name, label, values = [] }) =>
     label={ label }
     component={ styledSelect }>
     {
-      values.map(({ value, name }) =>
-        <MenuItem value={value}>{ name }</MenuItem>
+      values.map(({ value, name }, index) =>
+        <MenuItem key={ index } value={value}>{ name }</MenuItem>
       )
     }
   </Field>

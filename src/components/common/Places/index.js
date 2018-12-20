@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import { Place } from '..'
 
-const Places = ({ places = [], withUpdateLink = false }) => 
+const Places = ({ places = [], withUpdateLink = false, onItemClick }) => 
   <Fragment>
     { 
       places.map(({ name, address, id }) => 
@@ -10,6 +10,7 @@ const Places = ({ places = [], withUpdateLink = false }) =>
           key={ id }
           address={ address }
           placeId={ id }
+          onClick= { () => onItemClick(id) }
           withUpdateLink={ withUpdateLink } /> 
       )
     }
