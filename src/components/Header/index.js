@@ -8,24 +8,12 @@ const links = [
     name: 'Главная'
   },
   {
-    link: '/place/all',
+    link: '/all-places',
     name: 'Подбор заведения'
   },
   {
-    link: '/events',
+    link: '/all-events',
     name: 'События'
-  },
-  {
-    link: '/place',
-    name: 'Заведение'
-  },
-  {
-    link: '/reserve-place',
-    name: 'Re Place'
-  },
-  {
-    link: '/reserve-event',
-    name: 'Re Event'
   }
 ]
 

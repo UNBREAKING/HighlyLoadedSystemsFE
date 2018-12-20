@@ -4,21 +4,17 @@ import { Link } from 'react-router-dom'
 import { CommonLinkButton } from '../common'
 import { COLORS } from '../../constants'
 
-const PlaceBlock = () => 
+const PlaceBlock = ({ shortDescription, name, address, time, links }) => 
   <Wrapper>
     <Title>
-      Ресторан "Hollywood"
+      { name }
     </Title>
     <Description>
-      Описание заведения. Очень много текста.
-      Описание заведения. Очень много текста.
-      Описание заведения. Очень много текста.
-      Описание заведения. Очень много текста.
-      Описание заведения. Очень много текста.
+      { shortDescription }
     </Description>
     <CommonInfoWithLink>
       <Address to="/home">
-        проспект Газеты звезда 23, 13
+        { address }
       </Address>
       <LastWorkingHour>
         до 23.00

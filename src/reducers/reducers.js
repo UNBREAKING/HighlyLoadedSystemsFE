@@ -5,6 +5,8 @@ import { reducer as modal } from 'redux-modal'
 import login from '../components/Login/reducer'
 import profiles from '../components/ProfilePage/reducer'
 import userPlaces from '../components/AddIventPage/reducer'
+import allPlaces from '../components/PlacesPage/reducer'
+import allEvents from '../components/EventsPage/reducer'
 
 const reducers = history => combineReducers({
   form: reduxFormReducer,
@@ -12,7 +14,9 @@ const reducers = history => combineReducers({
   modal,
   login,
   profiles,
-  userPlaces
+  userPlaces,
+  allPlaces,
+  allEvents
 })
 
 export default reducers

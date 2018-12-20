@@ -25,8 +25,8 @@ const App = () =>
         <Route exact path='/' component={HomePage} />
         <Route exact path='/home' component={HomePage} />
         <Route exact path='/about-us' component={HomePage} />
-        <Route exact path='/place/all' component={PlacesPage} />
-        <Route exact path='/events' component={EventsPage} />
+        <Route exact path='/all-places' component={PlacesPage} />
+        <Route exact path='/all-events' component={EventsPage} />
         <Route exact path='/place' component={PlacePage} />
         <Route exact path='/user-profile' component={ProfilePage} />
         <Route exact path='/user-profile/add-place' component={AddPlacePage} />

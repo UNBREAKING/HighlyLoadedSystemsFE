@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom'
 import { CommonLinkButton } from '../common'
 import { COLORS } from '../../constants'
 
-const EventBlock = () => 
+const EventBlock = ({ name, links }) => 
   <Wrapper>
     <Title>
-      Новый год 2018
+      { name }
     </Title>
     <CommonInfoWithLink>
       <Address to="/place">

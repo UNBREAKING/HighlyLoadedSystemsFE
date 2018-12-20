@@ -51,6 +51,10 @@ export const api = {
     method: 'get',
     url: '/event/:id'
   },
+  getEvents: {
+    method: 'get',
+    url: '/event/all'
+  },
   addEvent: {
     method: 'post',
     url: '/event/add'
