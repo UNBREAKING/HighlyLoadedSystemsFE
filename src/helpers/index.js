@@ -1,2 +1,6 @@
 export { default as getSessionCookie } from './getSessionCookie'
 export { default as getTrueUrl } from './getTrueUrlFromBe'
+export { default as getPlaceUrl } from './getPlaceUrl'
+export { default as getEventUrl } from './getEventUrl'
+export { default as getUpdatePlaceUrl } from './getUpdatePlaceUrl'
+export { default as getUpdateEventUrl } from './getUpdateEventUrl'

@@ -3,8 +3,19 @@ import styled, { css } from 'styled-components'
 import { Link } from 'react-router-dom'
 import Icon from '@material-ui/core/Icon'
 import { COLORS } from '../../../constants'
+import { getEventUrl, getUpdateEventUrl } from '../../../helpers'
+import { CommonLinkButton } from '../'
 
-const Event = ({ available = true, withUpdateLink = false, name }) => 
+const Event = ({ 
+  available = true,
+  withUpdateLink = false, 
+  name, 
+  links: { 
+    updateLink: {
+      href = '/'
+    } = {}
+  } 
+}) => 
   <Wrapper available={ available }>
     <NameContainer>
       <Icon fontSize="large">
@@ -14,13 +25,13 @@ const Event = ({ available = true, withUpdateLink = false, name }) =>
         <Name>{ name }</Name>
         {
           withUpdateLink && 
-            <Link to="/">
+            <Link to={ getUpdateEventUrl(href) }>
               редактировать
             </Link>
         }
       </MainInf>
     </NameContainer>
-    <Button>
+    <Button to={ getEventUrl(href) }>
       <Icon fontSize="large">keyboard_arrow_right</Icon>
     </Button>
   </Wrapper>
@@ -66,11 +77,18 @@ const MainInf = styled.div`
   margin-left: 10px;
 `
 
-const Button = styled.button`
+const Button = styled(CommonLinkButton)`
   border: none;
   background: none;
   padding: 0;
   margin: 0;
   cursor: pointer;
   display: inherit;
+  color: ${COLORS.black};
+  box-shadow: none;
+
+  &:hover {
+    background: none;
+    color: ${COLORS.black};
+  }
 `

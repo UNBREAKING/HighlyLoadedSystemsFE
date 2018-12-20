@@ -9,7 +9,7 @@ import CommonAddButton from './CommonAddButton'
 const Events = ({ hideEvents = false, events = [] }) => 
   <Fragment>
     {
-      events.map( ({ name }) => <Event name={ name } withUpdateLink /> )
+      events.map( ({ name, _links }) => <Event name={ name } links={ _links } withUpdateLink /> )
     }
     {
       !hideEvents && <CommonAddButton to={ '/user-profile/add-event' } />

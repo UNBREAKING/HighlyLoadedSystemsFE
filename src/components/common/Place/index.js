@@ -2,9 +2,21 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import Icon from '@material-ui/core/Icon'
+import { getPlaceUrl, getUpdatePlaceUrl } from '../../../helpers'
 import { COLORS } from '../../../constants'
 
-const Place = ({ withUpdateLink = false, name, address, placeId, onClick }) => 
+const Place = ({ 
+  withUpdateLink = false, 
+  name, 
+  address, 
+  placeId, 
+  onClick,
+  links: { 
+    updateLink: {
+      href = '/'
+    } = {}
+  } 
+}) => 
   <Wrapper onClick={ onClick }>
     <InfoContainer>
       <Icon fontSize="large">
@@ -15,7 +27,7 @@ const Place = ({ withUpdateLink = false, name, address, placeId, onClick }) =>
           <Name> { name } </Name>
           {
             withUpdateLink && 
-              <Link to={ `/user-profile/place/${placeId}/update` }>
+              <Link to={ getUpdatePlaceUrl(href) }>
                 редактировать
               </Link>
           }
@@ -25,7 +37,7 @@ const Place = ({ withUpdateLink = false, name, address, placeId, onClick }) =>
         </Address>
       </MainInfo>
     </InfoContainer>
-    <Button to={ `/places/${placeId}` }>
+    <Button to={ getPlaceUrl(href) }>
       <Icon fontSize="large">keyboard_arrow_right</Icon>
     </Button>
   </Wrapper>

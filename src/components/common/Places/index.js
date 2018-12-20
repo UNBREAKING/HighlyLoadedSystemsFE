@@ -4,10 +4,11 @@ import { Place } from '..'
 const Places = ({ places = [], withUpdateLink = false, onItemClick }) => 
   <Fragment>
     { 
-      places.map(({ name, address, id }) => 
+      places.map(({ name, address, id, _links }) => 
         <Place
           name={ name }
           key={ id }
+          links={ _links }
           address={ address }
           placeId={ id }
           onClick= { () => onItemClick(id) }
