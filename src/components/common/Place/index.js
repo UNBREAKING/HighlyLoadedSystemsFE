@@ -84,6 +84,13 @@ const Button = styled(Link)`
   background: none;
   padding: 0;
   margin: 0;
+  color: ${COLORS.black};
+  text-decoration: none;
   cursor: pointer;
   display: inherit;
+
+  &:hover {
+    color: ${COLORS.black};
+    text-decoration: none;
+  }
 `
