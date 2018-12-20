@@ -27,7 +27,7 @@ const App = () =>
         <Route exact path='/about-us' component={HomePage} />
         <Route exact path='/all-places' component={PlacesPage} />
         <Route exact path='/all-events' component={EventsPage} />
-        <Route exact path='/place' component={PlacePage} />
+        <Route exact path='/all-places/:id' component={PlacePage} />
         <Route exact path='/user-profile' component={ProfilePage} />
         <Route exact path='/user-profile/add-place' component={AddPlacePage} />
         <Route exact path='/user-profile/add-event' component={AddIventPage} />

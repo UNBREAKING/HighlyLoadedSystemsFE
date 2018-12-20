@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { Link } from 'react-router-dom'
 import Icon from '@material-ui/core/Icon'
 import { getPlaceUrl, getUpdatePlaceUrl } from '../../../helpers'
@@ -11,13 +11,14 @@ const Place = ({
   address, 
   placeId, 
   onClick,
+  selected,
   links: { 
     updateLink: {
       href = '/'
     } = {}
-  } 
+  } = {}
 }) => 
-  <Wrapper onClick={ onClick }>
+  <Wrapper onClick={ onClick } selected={ selected }>
     <InfoContainer>
       <Icon fontSize="large">
         image
@@ -53,6 +54,10 @@ const Wrapper = styled.div`
   border-radius: 4px;
   padding: 20px 10px;
   margin-bottom: 10px;
+  ${props => props.selected && css`
+    background: ${COLORS.green};
+    color: ${COLORS.white};
+  `}
 
   :first-child {
     margin-top: 10px;

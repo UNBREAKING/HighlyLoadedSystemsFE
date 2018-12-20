@@ -4,23 +4,40 @@ import { CommonLinkButton } from '../common'
 import MainInformation from './MainInformation'
 import EventsAndComments from './EventsAndComments'
 
-const PlacePage = () => 
+const PlacePage = ({ 
+  place: {
+    address, 
+    comments, 
+    description, 
+    events,
+    name,
+    time,
+  },
+  match: {
+    params: {
+      id
+    } = {}
+  }
+}) => 
   <Fragment>
     <Header>
-      <Name>Ресторан "Hollywood"</Name>
+      <Name>{ name} </Name>
       <CommonLinkButton to="/home">Посмотреть на карте</CommonLinkButton>
     </Header>
     <Carousel>
       тут должна быть карусель
     </Carousel>
     <ReserveWrapper>
-      <CommonLinkButton to="/home">
+      <CommonLinkButton to={`/all-places/${id}/reserve`}>
         Бронь столика
       </CommonLinkButton>
     </ReserveWrapper>
     <Content>
-      <MainInformation />
-      <EventsAndComments />
+      <MainInformation 
+        address={ address}
+        time={ time } 
+        description= { description }/>
+      <EventsAndComments events={events} comments={ comments } placeId={id} />
     </Content>
   </Fragment>
 

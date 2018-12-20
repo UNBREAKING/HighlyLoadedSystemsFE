@@ -9,7 +9,7 @@ import {
 } from '../common'
 import { MINUTES, HOURS } from '../../constants'
 
-const AddIventPage = ({ places, addEvent, selectPlace }) =>
+const AddIventPage = ({ places, addEvent, selectPlace, selectedId }) =>
   <Wrapper>
     <HeaderWithButton title="Создание события" onClick={ addEvent } buttonText="Сохранить" />
     <Content>
@@ -19,7 +19,7 @@ const AddIventPage = ({ places, addEvent, selectPlace }) =>
         <Input label="Альтернативный адрес" fullWidth name="alternativeAddress" />
         <Input label="Описание" multiline fullWidth name="description" />
         <SmallItemListWrapper title="Ваши заведения">
-          <Places places={ places } onItemClick={ selectPlace } />
+          <Places places={ places } onItemClick={ selectPlace } selectedId={ selectedId } />
         </SmallItemListWrapper>
       </LeftContent>
       <RightContent>

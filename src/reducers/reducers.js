@@ -7,6 +7,7 @@ import profiles from '../components/ProfilePage/reducer'
 import userPlaces from '../components/AddIventPage/reducer'
 import allPlaces from '../components/PlacesPage/reducer'
 import allEvents from '../components/EventsPage/reducer'
+import placesInfo from '../components/PlacePage/reducer'
 
 const reducers = history => combineReducers({
   form: reduxFormReducer,
@@ -16,7 +17,8 @@ const reducers = history => combineReducers({
   profiles,
   userPlaces,
   allPlaces,
-  allEvents
+  allEvents,
+  placesInfo
 })
 
 export default reducers

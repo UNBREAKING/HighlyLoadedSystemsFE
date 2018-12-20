@@ -14,7 +14,7 @@ const Event = ({
     updateLink: {
       href = '/'
     } = {}
-  } 
+  } = {}
 }) => 
   <Wrapper available={ available }>
     <NameContainer>

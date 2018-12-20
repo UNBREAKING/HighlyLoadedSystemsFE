@@ -7,9 +7,10 @@ import AddIventPage from './AddIventPage'
 
 const mapStateToProps = ({
   userPlaces: {
-    places
+    places,
+    selectedId
   } = {}
-}) => ({ places })
+}) => ({ places, selectedId })
 
 export default compose(
   connect(mapStateToProps, { getProfile, addEvent, selectPlace }),

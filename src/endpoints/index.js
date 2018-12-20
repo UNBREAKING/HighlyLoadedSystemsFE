@@ -1,5 +1,6 @@
 import { api } from './endpoints'
 import axios from 'axios'
+import { changeUrlKeys } from '../helpers'
 
 //const baseURL = "http://localhost:8001"
 const timeout = 2000
@@ -29,8 +30,8 @@ Object.keys(api)
   .forEach( key => {
     const { url, method } = api[key]
 
-    endpoints[key] = (...args) => {
-      return axiosInstance[method](url, ...args)
+    endpoints[key] = ({ urlKeys, ...args} = {}) => {
+      return axiosInstance[method](changeUrlKeys(url, urlKeys), args)
         .catch( err => {
           console.log(err)
 
