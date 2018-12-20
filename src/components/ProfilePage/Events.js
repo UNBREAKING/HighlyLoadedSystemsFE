@@ -6,7 +6,7 @@ import { BUSINESS_CLIENT } from '../../constants'
 import CommonAddButton from './CommonAddButton'
 
 
-const Events = ({ href = '/', hideEvents = false }) => 
+const Events = ({ hideEvents = false }) => 
   <Fragment>
     <Event withUpdateLink />
     <Event withUpdateLink />
@@ -15,22 +15,17 @@ const Events = ({ href = '/', hideEvents = false }) =>
     <Event withUpdateLink />
     <Event withUpdateLink />
     {
-      !hideEvents && <CommonAddButton to={ href } />
+      !hideEvents && <CommonAddButton to={ '/user-profile/add-event' } />
     }
   </Fragment>
 
 const mapStateToProps = ({ 
   profiles: {
     currentUserProfile: {
-      role,
-      _links: {
-        linkToAddEvent: { 
-          href = '/'
-        } = {}
-      } = {} 
-    } = {} 
+      role
+    } = {}
   } = {}
-}) => ({ href, role })
+}) => ({ role })
 
 export default compose(
   connect(mapStateToProps),

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
+import { COLORS } from '../../constants'
 
 const HomePage = () => 
 
@@ -61,8 +62,9 @@ const InformationBlock = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 2px solid rgb(166, 29, 85);
-  border-radius: 10px;
+  border: 2px solid ${COLORS.darkred};
+  box-shadow: 0 0 3px 0px  ${COLORS.gray};
+  border-radius: 4px;
   margin-right: 20px;
   margin-bottom: 30px;
   :last-child {
@@ -74,8 +76,9 @@ const InformationBlockLast = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 2px solid rgb(166, 29, 85);
-  border-radius: 10px;
+  border: 2px solid ${COLORS.darkred};
+  box-shadow: 0 0 3px 0px  ${COLORS.gray};
+  border-radius: 4px;
   width: 1200px;
 `
 

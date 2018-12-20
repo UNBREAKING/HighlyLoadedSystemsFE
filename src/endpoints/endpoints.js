@@ -42,6 +42,10 @@ export const api = {
     method: 'get',
     url: '/profile/:id'
   },
+  placesProfile: {
+    method: 'get',
+    url: '/profile/add-event'
+  },
   //event
   event: {
     method: 'get',

@@ -7,6 +7,7 @@ const Places = ({ places = [], withUpdateLink = false }) =>
       places.map(({ name, address, id }) => 
         <Place
           name={ name }
+          key={ id }
           address={ address }
           placeId={ id }
           withUpdateLink={ withUpdateLink } /> 

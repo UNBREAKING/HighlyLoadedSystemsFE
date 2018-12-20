@@ -30,7 +30,7 @@ const App = () =>
         <Route exact path='/place' component={PlacePage} />
         <Route exact path='/user-profile' component={ProfilePage} />
         <Route exact path='/user-profile/add-place' component={AddPlacePage} />
-        <Route exact path='/add-event' component={AddIventPage} />
+        <Route exact path='/user-profile/add-event' component={AddIventPage} />
         <Route exact path='/reserve-place' component={ReservePlace} />
         <Route exact path='/reserve-event' component={ReserveEvent} />
       </Switch>
