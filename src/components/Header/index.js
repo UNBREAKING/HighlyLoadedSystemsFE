@@ -20,16 +20,8 @@ const links = [
     name: 'Заведение'
   },
   {
-    link: '/profile',
+    link: '/profiles',
     name: 'Профиль'
-  },
-  {
-    link: '/add-place',
-    name: 'Add Place'
-  },
-  {
-    link: '/add-event',
-    name: 'Add Event'
   },
   {
     link: '/reserve-place',

@@ -11,10 +11,10 @@ const Day = ({ day }) =>
       <Field name={`${day}.fullDescription`} component={ renderDay }/>
     </Date>
     <Date>
-      <Input label="Начало" fullWidth date name={`${day}.start`} />
+      <Input label="Начало" fullWidth time name={`${day}.start`} />
     </Date>
     <Date>
-      <Input label="Конец" fullWidth date name={`${day}.end`} />
+      <Input label="Конец" fullWidth time name={`${day}.end`} />
     </Date>
   </DayWrapper>
 

@@ -1,1 +1,1 @@
-export default url => url.replace('http://localhost:8001', '')
+export default url => url.replace('http://localhost:8081', '')
