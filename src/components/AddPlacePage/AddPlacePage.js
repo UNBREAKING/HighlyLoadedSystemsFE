@@ -4,13 +4,13 @@ import { Input, HeaderWithButton } from '../common'
 import WorkingHours from './WorkingHours'
 import SeatAdder from './SeatAdder'
 
-const AddPlacePage = () =>
+const AddPlacePage = ({ addPlaceHandler }) =>
   <Wrapper>
-    <HeaderWithButton title="Создание заведения" buttonText="Сохранить" />
+    <HeaderWithButton title="Создание заведения" onClick={ addPlaceHandler } buttonText="Сохранить" />
     <Content>
       <LeftContent>
         <Input label="Название заведния" fullWidth name="name" />
-        <Input label="Количество свободных мест" fullWidth name="numberOfAllPlaces" />
+        <Input label="Количество свободных мест" fullWidth number name="numberOfAllPlaces" />
         <Input label="Адрес" fullWidth name="address" />
         <Input label="Описание" multiline fullWidth name="description" />
         <SeatAdder />

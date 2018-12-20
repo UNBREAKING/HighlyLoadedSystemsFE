@@ -1,7 +1,7 @@
 import { api } from './endpoints'
 import axios from 'axios'
 
-const baseURL = "http://localhost:8001"
+//const baseURL = "http://localhost:8001"
 const timeout = 2000
 const headers = {
   'Content-Type' : 'application/json'
@@ -16,7 +16,7 @@ const headers = {
 
 //now it doesn't work with 'withCredentials' - we need it save cookies in app
 const axiosInstance = axios.create({
-  baseURL,
+  //baseURL,
   timeout,
   headers,
   withCredentials: true

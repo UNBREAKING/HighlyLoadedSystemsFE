@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import { reduxForm } from 'redux-form'
 import { Input, Button, RadioGroup } from '../../common'
 import { hideRegisterModalAndOpenLoginModal, register } from '../actions'
-import { REGISTER_FORM, COLORS } from '../../../constants'
+import { REGISTER_FORM, COLORS, GENERAL_CLIENT, BUSINESS_CLIENT } from '../../../constants'
 
 const elements = [
   {
@@ -31,11 +31,11 @@ const RegisterContent = ({ hideRegisterModalAndOpenLoginModal, register }) =>
     </Inputs>
     <Buttons>
       <Button
-        onClick={ () => register("GENERAL_CLIENT") }>
+        onClick={ () => register(GENERAL_CLIENT) }>
         Зарегистрироваться
       </Button>
       <SecondButton
-        onClick={ () => register("BUSINESS_CLIENT") }>
+        onClick={ () => register(BUSINESS_CLIENT) }>
         Зарегистрировать бизнес
       </SecondButton>
     </Buttons>

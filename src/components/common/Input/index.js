@@ -17,6 +17,7 @@ const commonInput = ({
   password, 
   number,
   date,
+  time,
   ...props 
 }) =>
   <MuiThemeProvider theme={theme}>
@@ -30,6 +31,9 @@ const commonInput = ({
       { ...date && 
           ({ type: "date", InputLabelProps: { shrink: true } }) 
       }
+      { ...time && 
+        ({ type: "time", InputLabelProps: { shrink: true } }) 
+    }
       { ...password && ({ type: "password" }) }
       { ...number && ({ type: "number" }) } />
   </MuiThemeProvider>

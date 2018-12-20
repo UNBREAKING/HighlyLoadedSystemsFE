@@ -2,12 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import { Button } from '../'
 
-export default ({ title, buttonText }) =>
+export default ({ title, buttonText, onClick }) =>
   <Header>
     <Title>
       { title }
     </Title>
-    <Button>
+    <Button onClick={ onClick }>
       { buttonText }
     </Button>
   </Header>

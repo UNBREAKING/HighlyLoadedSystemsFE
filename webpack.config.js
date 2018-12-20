@@ -3,7 +3,7 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 module.exports = {
   entry: './src/index.js',
   output: {
-    filename: 'bundle/index.js',
+    filename: 'index.js',
     publicPath: '/'
   },
   module: {
@@ -26,7 +26,17 @@ module.exports = {
     ]
   },
   devServer: {
-    historyApiFallback: true
+    historyApiFallback: true,
+    proxy: {
+      "/sign-in": "http://localhost:8001",
+      "/sign-out": "http://localhost:8001",
+      "/sign-up": "http://localhost:8001",
+      "/place/*": "http://localhost:8001",
+      "/profile": "http://localhost:8001",
+      "/profile/*": "http://localhost:8001",
+      "/event/*": "http://localhost:8001",
+      "/comment/*": "http://localhost:8001"
+    }
   },
   plugins: [
     new HtmlWebPackPlugin({

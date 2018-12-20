@@ -1,30 +1,44 @@
 export const workingHours = [
   {
     "day": "пн.",
-    "fullDescription": "Понедельник"
+    "fullDescription": "Понедельник",
+    "start": "07:00",
+    "end": "22:00"
   },
   {
     "day": "вт.",
-    "fullDescription": "Вторник"
+    "fullDescription": "Вторник",
+    "start": "07:00",
+    "end": "22:00"
   },
   {
     "day": "ср.",
-    "fullDescription": "Среда"
+    "fullDescription": "Среда",
+    "start": "07:00",
+    "end": "22:00"
   },
   {
     "day": "чт.",
-    "fullDescription": "Четверг"
+    "fullDescription": "Четверг",
+    "start": "07:00",
+    "end": "22:00"
   },
   {
     "day": "пт.",
-    "fullDescription": "Пятница"
+    "fullDescription": "Пятница",
+    "start": "07:00",
+    "end": "22:00"
   },
   {
     "day": "сб.",
-    "fullDescription": "Суббота"
+    "fullDescription": "Суббота",
+    "start": "07:00",
+    "end": "22:00"
   },
   {
     "day": "вс.",
-    "fullDescription": "Воскресенье"
+    "fullDescription": "Воскресенье",
+    "start": "07:00",
+    "end": "22:00"
   }
 ]

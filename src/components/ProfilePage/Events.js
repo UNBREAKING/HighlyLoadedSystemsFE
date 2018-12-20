@@ -1,10 +1,12 @@
 import React, { Fragment } from 'react'
+import { compose, withProps } from 'recompose'
 import { connect } from 'react-redux'
 import { Event } from '../common'
+import { BUSINESS_CLIENT } from '../../constants'
 import CommonAddButton from './CommonAddButton'
 
 
-const Events = ({ href = '/' }) => 
+const Events = ({ href = '/', hideEvents = false }) => 
   <Fragment>
     <Event withUpdateLink />
     <Event withUpdateLink />
@@ -12,12 +14,15 @@ const Events = ({ href = '/' }) =>
     <Event withUpdateLink />
     <Event withUpdateLink />
     <Event withUpdateLink />
-    <CommonAddButton to={ href } />
+    {
+      !hideEvents && <CommonAddButton to={ href } />
+    }
   </Fragment>
 
 const mapStateToProps = ({ 
   profiles: {
-    currentUserProfile: { 
+    currentUserProfile: {
+      role,
       _links: {
         linkToAddEvent: { 
           href = '/'
@@ -25,6 +30,13 @@ const mapStateToProps = ({
       } = {} 
     } = {} 
   } = {}
-}) => ({ href })
+}) => ({ href, role })
 
-export default connect(mapStateToProps)(Events)
+export default compose(
+  connect(mapStateToProps),
+  withProps(({
+    role
+  }) => ({
+    hideEvents: role !== BUSINESS_CLIENT 
+  })),
+)(Events)
