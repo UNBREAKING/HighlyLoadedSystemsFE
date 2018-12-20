@@ -1,15 +1,17 @@
 import React, { Fragment } from 'react'
 import { Place } from '..'
 
-const Places = () => 
+const Places = ({ places = [], withUpdateLink = false }) => 
   <Fragment>
-    <Place withUpdateLink />
-    <Place withUpdateLink />
-    <Place withUpdateLink />
-    <Place withUpdateLink />
-    <Place withUpdateLink />
-    <Place withUpdateLink />
-    <Place withUpdateLink />
+    { 
+      places.map(({ name, address, id }) => 
+        <Place
+          name={ name }
+          address={ address }
+          placeId={ id }
+          withUpdateLink={ withUpdateLink } /> 
+      )
+    }
   </Fragment>
 
 export default Places

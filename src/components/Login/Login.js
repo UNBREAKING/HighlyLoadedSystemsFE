@@ -11,7 +11,7 @@ const Login = ({ openLoginModal, isUserSignedIn, signout }) =>
           <Button onClick={ signout }>
             Выйти из профиля
           </Button>
-          <Profile to='/profiles'>
+          <Profile to='/user-profile'>
             <Icon fontSize="small">
               person
             </Icon>

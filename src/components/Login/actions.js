@@ -63,7 +63,7 @@ export const signin = () => (dispatch, getState) => {
     if (status === 'success') {
       dispatch(hideLoginModal())
       dispatch(userIsSignedIn())
-      dispatch(push(url))
+      dispatch(push('/user-profile'))
     }
   })
 }
@@ -101,7 +101,7 @@ export const register = (roleName = "GENERAL_CLIENT") => (dispatch, getState) =>
     if (status === 'success') {
       dispatch(hideRegisterModal())
       dispatch(userIsSignedIn())
-      dispatch(push(url))
+      dispatch(push('/user-profile'))
     }
   })
 }

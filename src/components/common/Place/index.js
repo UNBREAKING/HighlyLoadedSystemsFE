@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import Icon from '@material-ui/core/Icon'
 import { COLORS } from '../../../constants'
 
-const Place = ({ withUpdateLink = false }) => 
+const Place = ({ withUpdateLink = false, name, address, placeId }) => 
   <Wrapper>
     <InfoContainer>
       <Icon fontSize="large">
@@ -12,20 +12,20 @@ const Place = ({ withUpdateLink = false }) =>
       </Icon>
       <MainInfo>
         <NameAndLink>
-          <Name> День святого патрика</Name>
+          <Name> { name } </Name>
           {
             withUpdateLink && 
-              <Link to="/">
+              <Link to={ `/user-profile/place/${placeId}/update` }>
                 редактировать
               </Link>
           }
         </NameAndLink>
         <Address>
-          Адрес: улица Зыбицкая, 13 г.Минск
+          { address }
         </Address>
       </MainInfo>
     </InfoContainer>
-    <Button>
+    <Button to={ `/places/${placeId}` }>
       <Icon fontSize="large">keyboard_arrow_right</Icon>
     </Button>
   </Wrapper>
@@ -79,7 +79,7 @@ const Name = styled.div`
   font-size: 26px;
 `
 
-const Button = styled.button`
+const Button = styled(Link)`
   border: none;
   background: none;
   padding: 0;

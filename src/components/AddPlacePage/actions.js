@@ -1,4 +1,5 @@
 import endpoints from '../../endpoints'
+import { push } from 'connected-react-router'
 
 export const addPlaceHandler = () => (dispatch, getState) => {
   const { addPlace } = endpoints
@@ -9,22 +10,27 @@ export const addPlaceHandler = () => (dispatch, getState) => {
         values: {
           workingHours,
           name,
-          numbeOfAllPlaces: fullNumberOfPlaces,
+          numberOfAllPlaces: fullNumberOfPlaces,
           address,
           description,
-          typeOfTables
+          typesOfTables
         } = {}
       } = {}
     } = {}
   } = getState()
 
   addPlace({
-    workingHours,
+    workingHours: workingHours.map(({ day, end, start }) => ({ day, end, start })),
     name,
-    fullNumberOfPlaces,
+    fullNumberOfPlaces: Number(fullNumberOfPlaces),
     address,
+    rating: 0,
     description,
-    typeOfTables
+    typesOfTables: typesOfTables.map(({ name, number }) => ({ name, number: Number(number) }))
   })
-  .then(data => console.log(data))
+  .then(({ status }) => {
+    if(status === 'success') {
+      dispatch(push('/user-profile'))
+    }
+  })
 }

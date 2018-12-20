@@ -20,12 +20,13 @@ export const PLACES_FILTERS = "filtersPlaces"
 export const EVENTS_FILTERS = "filtersEvents"
 export const RESERVE_TIME = 'reserveTime'
 
+export const GENERAL_CLIENT = 'GENERAL_CLIENT'
+export const BUSINESS_CLIENT = 'BUSINESS_CLIENT'
+
 export const MINUTES = new Array(4).fill(1)
   .map((item, index) => 
     ({ value: index * 15, name: index === 0 ? "00" : index * 15 })
   )
-
-
 
 export const HOURS = new Array(24).fill(1)
   .map((item, index) =>

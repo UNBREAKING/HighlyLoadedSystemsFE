@@ -12,11 +12,7 @@ const ProfilePage = ({
     email,
     surnname = "",
     sex = "",
-    _links: {
-      linkToAddPlace: { 
-        href = '/'
-      } = {}
-    } = {} 
+    places
   } = {}
 }) =>
   <Wrapper>
@@ -33,8 +29,8 @@ const ProfilePage = ({
     <PlacesAndEvents>
       <Column hide={ hidePlaces }>
         <SmallItemListWrapper title="Ваши заведения">
-          <Places />
-          <CommonAddButton to={ href } />
+          <Places places={ places } withUpdateLink />
+          <CommonAddButton to={ '/user-profile/add-place' } />
         </SmallItemListWrapper>
       </Column>
       <Column hide={ hideEvents }>
