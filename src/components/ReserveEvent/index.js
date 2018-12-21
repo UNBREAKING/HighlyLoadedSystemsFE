@@ -1,11 +1,19 @@
-import { compose, lifecycle } from 'recompose'
+import { compose, lifecycle, withProps } from 'recompose'
 import { connect } from 'react-redux'
 import { getEvent, clearEventPage, getCurrentEvent, reserveEvent } from './actions'
 import ReserveEvent from './ReserveEvent'
 
 const mapStateToProps = ({
   eventReserve: {
-    typesOfTables = []
+    typesOfTables = [],
+    dateTimeStart,
+    event: {
+      name: eventName
+    } = {},
+    place: {
+      name: placeName,
+      address
+    } = {}
   } = {},
   form: {
     reserveTime: {
@@ -20,11 +28,23 @@ const mapStateToProps = ({
    hours,
    minutes,
    date,
-   typesOfTables
+   typesOfTables,
+   dateTimeStart,
+   eventName,
+   placeName,
+   address
  })
 
 export default compose(
   connect(mapStateToProps, { getCurrentEvent, getEvent, clearEventPage, reserveEvent }),
+  withProps(({ dateTimeStart }) => {
+    const date = new Date(dateTimeStart)
+
+    return {
+      userDate: `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`,
+      time: `${date.getHours()}.${date.getMinutes()}`
+    }
+  }),
   lifecycle({
     componentDidMount() {
       const {

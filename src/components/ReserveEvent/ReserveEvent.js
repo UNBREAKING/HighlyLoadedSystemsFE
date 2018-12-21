@@ -1,34 +1,55 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import styled from 'styled-components'
 import { PlaceSelector, ReserveForm } from '../common'
 import Description from './Description'
 
-const ReserveEvent = ({ typesOfTables, reserveEvent }) => 
+const ReserveEvent = ({ 
+  typesOfTables, 
+  reserveEvent, 
+  date, 
+  time, 
+  placeName, 
+  eventName,
+  address
+}) => 
   <Wrapper>
-    <Title>Событие: День Святого Патрика</Title>
+    {
+      typesOfTables.length > 0 && 
+        <Title>Событие: { eventName }</Title>
+    }
     <Header>
       <SmallTitle>
-        Место: Irish Clever Pub
+        { 
+          typesOfTables.length ? 
+            `Место: ${placeName}, ${address}` : 
+            `Событие: ${eventName}` 
+        }
       </SmallTitle>
       <TimeAndDate>
         <Time>
-          Начало: 11.00
+          Начало: {time}
         </Time>
         <Date>
-          Дата: 22.03.2018
+          Дата: {date}
         </Date>
       </TimeAndDate>
     </Header>
     <ImageWrapper />
-    <SelectContent>
-      <LeftContent>
-        <PlaceSelector typesOfTables={ typesOfTables } onClick={ reserveEvent } />
-      </LeftContent>
-      <RightContent>
-        <ReserveForm />
-        <Description description="описание тут"/>
-      </RightContent>
-    </SelectContent>
+    {
+      typesOfTables.length > 0 ? 
+        <Fragment>
+          <SelectContent>
+            <LeftContent>
+              <PlaceSelector typesOfTables={ typesOfTables } onClick={ reserveEvent } />
+            </LeftContent>
+            <RightContent>
+              <ReserveForm />
+              <Description description="описание тут"/>
+            </RightContent>
+          </SelectContent>    
+        </Fragment> :
+        <Description description="описание тут" />
+    }
   </Wrapper>
 
 export default ReserveEvent

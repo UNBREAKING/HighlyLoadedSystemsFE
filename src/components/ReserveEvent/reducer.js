@@ -5,7 +5,13 @@ const initialState = {
 }
 
 const eventReserve = handleActions({
-  [saveEvent]: (state, { payload }) => ({ ...state, ...payload }),
+  [saveEvent]: (state, { payload }) => ({ 
+    ...state, 
+    ...payload, 
+    place: payload.place || {},
+    event: payload.event || {},
+    typesOfTables: payload.typesOfTables || []
+  }),
   [clearEventPage]: () => initialState
 }, initialState)
 
