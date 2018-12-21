@@ -2,31 +2,13 @@ import React from 'react'
 import styled from 'styled-components'
 import { PlaceSelector, ReserveForm } from '../common'
 
-const typesOfTables = [
-  {
-    "name": "столик на 2",
-    "available": false,
-    "id": "id123123"
-  },
-  {
-    "name": "столик на 4",
-    "available": true,
-    "id": "id123123"
-  },
-  {
-    "name": "столик на 4",
-    "available": true,
-    "id": "id123123"
-  }
-]
-
-const ReservePlace = () => 
+const ReservePlace = ({ typesOfTables, placeName, reservePlace }) => 
   <Wrapper>
-    <Title>Место: Irish Clever Pub</Title>
+    <Title>Место: {placeName}</Title>
     <ImageWrapper />
     <SelectContent>
       <LeftContent>
-        <PlaceSelector typesOfTables={ typesOfTables} />
+        <PlaceSelector onClick={ reservePlace } typesOfTables={ typesOfTables } />
       </LeftContent>
       <RightContent>
         <ReserveForm />

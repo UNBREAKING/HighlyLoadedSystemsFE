@@ -4,15 +4,15 @@ import endpoints from '../../endpoints'
 import { initialize } from 'redux-form'
 import { DEFAULT_TIME_QUERY } from '../../constants'
 
-export const saveEvent = createAction('EVENT_PAGE/SAVE_EVENT')
-export const clearEventPage = createAction('EVENT_PAGE/CLEAN_EVENT_PAGE')
+export const savePlace = createAction('PLACE_RESERVE_PAGE/SAVE_PLACE_INFO')
+export const clearPlaceReservePage = createAction('PLACE_RESERVE_PAGE/CLEAN_PLACE_RESERVE_PAGE')
 
-export const getEvent = id => dispatch => {
-  const { event } = endpoints
+export const getPlaceReserve = id => dispatch => {
+  const { placeReserve } = endpoints
   
-  event({ urlKeys: { id }, params: { ...DEFAULT_TIME_QUERY } })
+  placeReserve({ urlKeys: { id }, params: { ...DEFAULT_TIME_QUERY } })
     .then(data => { 
-      dispatch(saveEvent(data))
+      dispatch(savePlace(data))
 
       dispatch(
         initialize(
@@ -20,7 +20,7 @@ export const getEvent = id => dispatch => {
           {
           hoursStart: DEFAULT_TIME_QUERY.hours,
           minutesStart: DEFAULT_TIME_QUERY.minutes,
-          date: data.date,
+          date: DEFAULT_TIME_QUERY.date,
           name: data.userName || "",
           number: data.userPhoneNumber || ""
         })
@@ -28,8 +28,8 @@ export const getEvent = id => dispatch => {
     })
 }
 
-export const getCurrentEvent = id => (dispatch, getState) => {
-  const { event } = endpoints
+export const getCurrentPlaceReserve = id => (dispatch, getState) => {
+  const { placeReserve } = endpoints
   
   const {
     form: {
@@ -43,13 +43,13 @@ export const getCurrentEvent = id => (dispatch, getState) => {
     } = {}
   } = getState()
 
-  event({ urlKeys: { id }, params: { hours, minutes, date } })
+  placeReserve({ urlKeys: { id }, params: { hours, minutes, date } })
     .then(data => { 
-      dispatch(saveEvent(data))
+      dispatch(savePlace(data))
     })
 }
 
-export const reserveEvent = idOfTable => (dispatch, getState) =>{
+export const reservePlace = idOfTable => (dispatch, getState) =>{
   const { reserve } = endpoints
   
   const {
@@ -74,7 +74,7 @@ export const reserveEvent = idOfTable => (dispatch, getState) =>{
     date,
     description,
     userName,
-    type: "EVENT",
+    type: "PLACE",
     userPhoneNumber
-  }).then(()=> dispatch(push('/all-events')))
+  }).then(()=> dispatch(push('/all-places')))
 }
