@@ -4,17 +4,17 @@ import { reduxForm } from 'redux-form'
 import { RESERVE_TIME, HOURS, MINUTES } from '../../../constants'
 import { Input, Select } from '../'
 
-const ReserveForm = () => 
+const ReserveForm = ({ blockDate = false }) => 
   <Form>
     <Title>
       Время
     </Title>
     <Content>
       <TimeAndUserData>
-        <Selects>
+        <Selects blockDate={ blockDate }>
           <Select name="hoursStart" label="Часы" values={ HOURS } />
           <Select name="minutesStart" label="Минуты" values={ MINUTES } />
-          <Input label="Дата" fullWidth date name="date" />
+          { !blockDate && <Input label="Дата" fullWidth date name="date" /> }
         </Selects>
         <Title>
         Общие данные
@@ -43,7 +43,7 @@ const Selects = styled.div`
   display: flex;
   flex-direction: row;
   align-items: flex-end;
-  justify-content: space-between;
+  justify-content: ${props => props.blockDate ? 'flex-start' : 'space-between'};
 `
 
 const Title = styled.h3`

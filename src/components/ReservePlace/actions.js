@@ -20,7 +20,7 @@ export const getEvent = id => dispatch => {
           {
           hoursStart: DEFAULT_TIME_QUERY.hours,
           minutesStart: DEFAULT_TIME_QUERY.minutes,
-          date: data.dateTimeStart,
+          date: data.date,
           name: data.userName || "",
           number: data.userPhoneNumber || ""
         })

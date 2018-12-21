@@ -74,10 +74,9 @@ export default compose(
             id
           } = {}
         } = {}
-      } = this.props
+      } = this.props;
 
-      !(!oldHours && !oldMinutes && !oldDate) &&
-        ( hours !== oldHours || minutes !== oldMinutes || oldDate !== date ) &&
+      (hours !== oldHours || minutes !== oldMinutes || oldDate !== date) &&
         getCurrentEvent(id)
     }
   })

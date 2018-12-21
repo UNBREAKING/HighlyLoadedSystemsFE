@@ -6,7 +6,7 @@ import Description from './Description'
 const ReserveEvent = ({ 
   typesOfTables, 
   reserveEvent, 
-  date, 
+  userDate, 
   time, 
   placeName, 
   eventName,
@@ -30,7 +30,7 @@ const ReserveEvent = ({
           Начало: {time}
         </Time>
         <Date>
-          Дата: {date}
+          Дата: {userDate}
         </Date>
       </TimeAndDate>
     </Header>
@@ -43,7 +43,7 @@ const ReserveEvent = ({
               <PlaceSelector typesOfTables={ typesOfTables } onClick={ reserveEvent } />
             </LeftContent>
             <RightContent>
-              <ReserveForm />
+              <ReserveForm blockDate />
               <Description description="описание тут"/>
             </RightContent>
           </SelectContent>    

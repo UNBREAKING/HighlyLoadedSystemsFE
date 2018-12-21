@@ -31,7 +31,7 @@ const App = () =>
         <Route exact path='/user-profile' component={ProfilePage} />
         <Route exact path='/user-profile/add-place' component={AddPlacePage} />
         <Route exact path='/user-profile/add-event' component={AddIventPage} />
-        <Route exact path='/reserve-place' component={ReservePlace} />
+        <Route exact path='/all-places/:id/reserve' component={ReservePlace} />
         <Route exact path='/all-events/:id' component={ReserveEvent} />
       </Switch>
     </Content>
