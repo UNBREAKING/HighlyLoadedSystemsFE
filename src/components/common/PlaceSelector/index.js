@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react'
-import { withStateHandlers } from 'recompose'
+import { withStateHandlers, compose, lifecycle } from 'recompose'
 import styled, { css } from 'styled-components'
 import { COLORS } from '../../../constants'
 import { Button } from '../'
 
-const PlaceSelector = ({ typesOfTables = [], onSelect, selecedItem }) =>
+const PlaceSelector = ({ typesOfTables = [], onSelect, selecedItem, onClick }) =>
   <Fragment>
     <Wrapper>
       { 
@@ -19,17 +19,29 @@ const PlaceSelector = ({ typesOfTables = [], onSelect, selecedItem }) =>
         )
       }
     </Wrapper>
-    <ReserveButton>
+    <ReserveButton onClick={ () => onClick(selecedItem) }>
       Заказать
     </ReserveButton>
   </Fragment>
 
-export default withStateHandlers(
-  () => ({ selecedItem: null }),
-  {
-    onSelect: () => name => ({ selecedItem: name })
-  }
-)(PlaceSelector)
+export default compose(
+  withStateHandlers(
+    () => ({ selecedItem: null }),
+    {
+      onSelect: () => name => ({ selecedItem: name })
+    }
+  ),
+  lifecycle({
+    componentDidUpdate({ selecedItem, onSelect }) {
+      const { typesOfTables } = this.props
+
+      if(selecedItem && !typesOfTables[selecedItem].available) {
+        onSelect(null)
+      }
+    }
+  })
+)
+(PlaceSelector)
 
 const Wrapper = styled.div`
   padding: 20px;

@@ -35,7 +35,8 @@ module.exports = {
       "/profile": "http://localhost:8001",
       "/profile/*": "http://localhost:8001",
       "/event/*": "http://localhost:8001",
-      "/comment/*": "http://localhost:8001"
+      "/comment/*": "http://localhost:8001",
+      "/reservation/*": "http://localhost:8001"
     }
   },
   plugins: [

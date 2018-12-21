@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-
+import { connect } from 'react-redux'
 
 const Description = ({ description }) =>
   <Fragment>
@@ -11,4 +11,10 @@ const Description = ({ description }) =>
     </div>
   </Fragment>
 
-export default Description
+const mapStateToProps = ({
+  eventReserve: {
+    description
+  } = {}
+}) => ({ description })
+
+export default connect(mapStateToProps)(Description)

@@ -36,3 +36,11 @@ export const HOURS = new Array(24).fill(1)
       name: index < 10 ? `0${index}`: index
     })
   )
+
+export const DATE = new Date()
+
+export const DEFAULT_TIME_QUERY = {
+  hours: 9,
+  minutes: 0,
+  date: `${DATE.getFullYear()}-${DATE.getMonth() + 1}-${DATE.getDate()}`
+}

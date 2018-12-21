@@ -8,6 +8,7 @@ import userPlaces from '../components/AddIventPage/reducer'
 import allPlaces from '../components/PlacesPage/reducer'
 import allEvents from '../components/EventsPage/reducer'
 import placesInfo from '../components/PlacePage/reducer'
+import eventReserve from '../components/ReserveEvent/reducer'
 
 const reducers = history => combineReducers({
   form: reduxFormReducer,
@@ -18,7 +19,8 @@ const reducers = history => combineReducers({
   userPlaces,
   allPlaces,
   allEvents,
-  placesInfo
+  placesInfo,
+  eventReserve
 })
 
 export default reducers

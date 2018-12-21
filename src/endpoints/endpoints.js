@@ -71,5 +71,9 @@ export const api = {
   removeComment: {
     method: 'post',
     url: '/comment/romeve/:commentId'
+  },
+  reserve: {
+    method: 'post',
+    url: '/reservation/reserve'
   }
 }

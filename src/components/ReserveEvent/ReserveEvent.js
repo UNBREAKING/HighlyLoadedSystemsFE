@@ -3,25 +3,7 @@ import styled from 'styled-components'
 import { PlaceSelector, ReserveForm } from '../common'
 import Description from './Description'
 
-const typesOfTables = [
-  {
-    "name": "столик на 2",
-    "available": false,
-    "id": "id123123"
-  },
-  {
-    "name": "столик на 4",
-    "available": true,
-    "id": "id123123"
-  },
-  {
-    "name": "столик на 4",
-    "available": true,
-    "id": "id123123"
-  }
-]
-
-const ReserveEvent = () => 
+const ReserveEvent = ({ typesOfTables, reserveEvent }) => 
   <Wrapper>
     <Title>Событие: День Святого Патрика</Title>
     <Header>
@@ -40,7 +22,7 @@ const ReserveEvent = () =>
     <ImageWrapper />
     <SelectContent>
       <LeftContent>
-        <PlaceSelector typesOfTables={ typesOfTables} />
+        <PlaceSelector typesOfTables={ typesOfTables } onClick={ reserveEvent } />
       </LeftContent>
       <RightContent>
         <ReserveForm />
