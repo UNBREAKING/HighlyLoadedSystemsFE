@@ -5,9 +5,12 @@ import { Button } from '../'
 const BigItemListWrapper = ({ children, text }) =>
 <Fragment>
   { children }
-  <AddItemsToListButton>
-    { text }
-  </AddItemsToListButton>
+  {
+    text &&
+      <AddItemsToListButton>
+        { text }
+      </AddItemsToListButton>
+  }
 </Fragment>
 
 export default BigItemListWrapper

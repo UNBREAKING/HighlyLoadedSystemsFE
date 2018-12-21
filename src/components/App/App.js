@@ -32,7 +32,7 @@ const App = () =>
         <Route exact path='/user-profile/add-place' component={AddPlacePage} />
         <Route exact path='/user-profile/add-event' component={AddIventPage} />
         <Route exact path='/reserve-place' component={ReservePlace} />
-        <Route exact path='/reserve-event' component={ReserveEvent} />
+        <Route exact path='/all-events/:id' component={ReserveEvent} />
       </Switch>
     </Content>
     <Modals />

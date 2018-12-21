@@ -10,7 +10,7 @@ const EventsPage = () =>
       <Filters />
     </FiltersBlock>
     <Items>
-      <BigItemListWrapper text="Загрузите еще 15 событий">
+      <BigItemListWrapper>
         <EventBlocks/>
       </BigItemListWrapper>
     </Items>

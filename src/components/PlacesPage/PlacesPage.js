@@ -10,7 +10,7 @@ const PlacesPage = () =>
       <Filters />
     </FiltersBlock>
     <Items>
-      <BigItemListWrapper text="Загрузите еще 15 мест">
+      <BigItemListWrapper>
         <PlaceBlocks />
       </BigItemListWrapper>
     </Items>
