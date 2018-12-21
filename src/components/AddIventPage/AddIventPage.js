@@ -15,7 +15,7 @@ const AddIventPage = ({ places, addEvent, selectPlace, selectedId }) =>
     <Content>
       <LeftContent>
         <Input label="Название события" fullWidth name="name" />
-        <Input label="Количество свободных мест" fullWidth name="numberOfAllPlaces" />
+        <Input label="Количество свободных мест" fullWidth number name="numberOfAllPlaces" />
         <Input label="Альтернативный адрес" fullWidth name="alternativeAddress" />
         <Input label="Описание" multiline fullWidth name="description" />
         <SmallItemListWrapper title="Ваши заведения">

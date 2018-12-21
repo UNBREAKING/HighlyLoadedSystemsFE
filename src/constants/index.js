@@ -15,6 +15,7 @@ export const COLORS = {
 export const LOGIN_FORM = "login"
 export const REGISTER_FORM = "register"
 export const ADD_PLACE_FORM = "addPlace"
+export const COMMENT_FORM = 'comments'
 export const ADD_EVENT_FORM = "addEvent"
 export const PLACES_FILTERS = "filtersPlaces"
 export const EVENTS_FILTERS = "filtersEvents"
